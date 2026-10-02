@@ -335,32 +335,52 @@
         </p>
       </div>
 
-      <!-- Critical Red Zone: Banned Additives Warning (To rõ nét) -->
-      <div class="bg-red-50 p-6 rounded-2xl border border-red-200 shadow-sm">
-        <div class="flex items-center gap-2.5 text-red-700 font-extrabold text-base sm:text-lg mb-2">
-          <i data-lucide="alert-triangle" class="w-6 h-6 shrink-0"></i>
-          <span>LƯU Ý PHÁP LÝ QUAN TRỌNG: 4 HÓA CHẤT NGOÀI DANH MỤC ĐƯỢC PHÉP DÙNG</span>
-        </div>
-        <p class="text-sm text-red-950 leading-relaxed mb-4">
-          Các chất sau đây <strong>HOÀN TOÀN KHÔNG CÓ TRONG DANH MỤC PHỤ GIA THỰC PHẨM ĐƯỢC PHÉP SỬ DỤNG</strong>. Hành vi sử dụng bị xử lý theo quy định pháp luật hiện hành:
-        </p>
+      <!-- Collapsible Alert Box: Banned Additives Warning (Gôm lại chống rối mắt) -->
+      <div class="bg-red-50/80 hover:bg-red-50 rounded-2xl border border-red-200 shadow-sm overflow-hidden transition-all duration-200">
+        <button onclick="toggleAlertBox()" class="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-3 focus:outline-none touch-target" id="btnToggleAlert" aria-expanded="false" title="Nhấn để mở hoặc thu gọn lưu ý pháp lý">
+          <div class="flex items-center gap-3 min-w-0">
+            <div class="w-9 h-9 rounded-xl bg-red-100 text-red-700 flex items-center justify-center shrink-0">
+              <i data-lucide="alert-triangle" class="w-5 h-5"></i>
+            </div>
+            <div class="min-w-0">
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="font-extrabold text-sm sm:text-base text-red-800">LƯU Ý PHÁP LÝ QUAN TRỌNG: 4 HÓA CHẤT NGOÀI DANH MỤC ĐƯỢC PHÉP DÙNG</span>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-red-200/90 text-red-800">Cấm sử dụng</span>
+              </div>
+              <p class="text-xs text-red-700/80 mt-0.5 truncate hidden sm:block">Hàn the, Formol, Tinopal, Javel/Clorin &bull; Nhấp để xem chi tiết mức độ nguy hại &amp; chế tài</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 shrink-0">
+            <span class="text-xs font-bold text-red-700 hidden sm:inline" id="alertToggleText">Xem chi tiết</span>
+            <div class="w-8 h-8 rounded-lg bg-red-100/80 flex items-center justify-center text-red-700">
+              <i data-lucide="chevron-down" id="alertToggleIcon" class="w-4 h-4 transition-transform duration-200"></i>
+            </div>
+          </div>
+        </button>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-sm">
-          <div class="bg-white p-3.5 rounded-xl border border-red-200 shadow-sm">
-            <strong class="text-red-700 block font-bold text-base">1. HÀN THE (Borax)</strong>
-            <span class="text-xs sm:text-sm text-[#475569] mt-1 block">Tích tụ mô, làm suy gan, teo thận, ngộ độc cấp &amp; mãn tính</span>
-          </div>
-          <div class="bg-white p-3.5 rounded-xl border border-red-200 shadow-sm">
-            <strong class="text-red-700 block font-bold text-base">2. FORMOL (Formaldehyde)</strong>
-            <span class="text-xs sm:text-sm text-[#475569] mt-1 block">Hóa chất ướp xác, gây ung thư vòm họng &amp; đường tiêu hóa</span>
-          </div>
-          <div class="bg-white p-3.5 rounded-xl border border-red-200 shadow-sm">
-            <strong class="text-red-700 block font-bold text-base">3. TINOPAL</strong>
-            <span class="text-xs sm:text-sm text-[#475569] mt-1 block">Chất tẩy trắng huỳnh quang công nghiệp, phá hủy tế bào</span>
-          </div>
-          <div class="bg-white p-3.5 rounded-xl border border-red-200 shadow-sm">
-            <strong class="text-red-700 block font-bold text-base">4. JAVEL / CLORIN</strong>
-            <span class="text-xs sm:text-sm text-[#475569] mt-1 block">Tẩy trắng bún sinh dioxin &amp; hợp chất Clo độc hại</span>
+        <!-- Hidden content expanded on click -->
+        <div id="alertBoxContent" class="hidden px-5 pb-5 pt-2 border-t border-red-200/60 bg-white/70">
+          <p class="text-xs sm:text-sm text-red-950 leading-relaxed mb-3.5">
+            Các chất sau đây <strong>HOÀN TOÀN KHÔNG CÓ TRONG DANH MỤC PHỤ GIA THỰC PHẨM ĐƯỢC PHÉP SỬ DỤNG</strong>. Hành vi sử dụng bị xử lý theo quy định pháp luật hiện hành:
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-sm">
+            <div class="bg-white p-3.5 rounded-xl border border-red-200 shadow-sm">
+              <strong class="text-red-700 block font-bold text-base">1. HÀN THE (Borax)</strong>
+              <span class="text-xs sm:text-sm text-[#475569] mt-1 block">Tích tụ mô, làm suy gan, teo thận, ngộ độc cấp &amp; mãn tính</span>
+            </div>
+            <div class="bg-white p-3.5 rounded-xl border border-red-200 shadow-sm">
+              <strong class="text-red-700 block font-bold text-base">2. FORMOL (Formaldehyde)</strong>
+              <span class="text-xs sm:text-sm text-[#475569] mt-1 block">Hóa chất ướp xác, gây ung thư vòm họng &amp; đường tiêu hóa</span>
+            </div>
+            <div class="bg-white p-3.5 rounded-xl border border-red-200 shadow-sm">
+              <strong class="text-red-700 block font-bold text-base">3. TINOPAL</strong>
+              <span class="text-xs sm:text-sm text-[#475569] mt-1 block">Chất tẩy trắng huỳnh quang công nghiệp, phá hủy tế bào</span>
+            </div>
+            <div class="bg-white p-3.5 rounded-xl border border-red-200 shadow-sm">
+              <strong class="text-red-700 block font-bold text-base">4. JAVEL / CLORIN</strong>
+              <span class="text-xs sm:text-sm text-[#475569] mt-1 block">Tẩy trắng bún sinh dioxin &amp; hợp chất Clo độc hại</span>
+            </div>
           </div>
         </div>
       </div>
@@ -1554,6 +1574,25 @@
           card.classList.add('hidden');
         }
       });
+    }
+
+    // Toggle Legal Alert Box in Category 1
+    function toggleAlertBox() {
+      const content = document.getElementById('alertBoxContent');
+      const icon = document.getElementById('alertToggleIcon');
+      const text = document.getElementById('alertToggleText');
+      const btn = document.getElementById('btnToggleAlert');
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        if (icon) icon.classList.add('rotate-180');
+        if (text) text.innerText = 'Thu gọn';
+        if (btn) btn.setAttribute('aria-expanded', 'true');
+      } else {
+        content.classList.add('hidden');
+        if (icon) icon.classList.remove('rotate-180');
+        if (text) text.innerText = 'Xem chi tiết';
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      }
     }
 
     // Toggle Trouble in Category 5
