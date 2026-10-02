@@ -1,6 +1,6 @@
 # HƯỚNG DẪN SỬ DỤNG PHỤ GIA CHO BÚN TƯƠI TRUYỀN THỐNG VIỆT NAM
 
-> **Ứng dụng Web & Cẩm nang Kỹ thuật Thực phẩm Thực chiến**  
+> **Ứng dụng Web & Tài liệu Kỹ thuật An toàn Thực phẩm**  
 > Bám sát Thông tư 24/2019/TT-BYT, TT 17/2023/TT-BYT, TT 08/2024/TT-BYT và Văn bản hợp nhất **09/VBHN-BYT (06/09/2024)**  
 > Nhóm thực phẩm áp dụng: **06.4.3 – Sản phẩm dạng sợi đã làm chín (Bún tươi)**  
 > Domain dự kiến: [https://baoquanbun.vercel.app/](https://baoquanbun.vercel.app/)
@@ -8,16 +8,16 @@
 ---
 
 ## 📌 Giới Thiệu
-Dự án được xây dựng nhằm mục đích cung cấp cẩm nang tra cứu và công cụ tính toán phối trộn phụ gia an toàn, đúng chuẩn pháp lý cho các cơ sở sản xuất, cán bộ kỹ thuật, QA/QC và quản lý xưởng bún tươi truyền thống trên toàn quốc.
+Dự án được xây dựng nhằm mục đích cung cấp tài liệu kỹ thuật tra cứu và công cụ tính toán phối trộn phụ gia an toàn, đúng chuẩn pháp lý cho các cơ sở sản xuất, cán bộ kỹ thuật, QA/QC và quản lý xưởng bún tươi truyền thống trên toàn quốc.
 
-### 🌟 Tính Năng Nổi Bật
-1. **Đính chính 7 sai lầm nghiêm trọng:** Làm rõ mã nhóm thực phẩm chuẩn 06.4.3 (không nhầm lẫn với nhóm bột 06.2.1), cơ chế độ tan của Acid Sorbic, tính bền nhiệt của Acid Lactic, bản chất tạo gel của Amylose trong gạo.
-2. **Cảnh báo chất cấm tuyệt đối:** Nói KHÔNG với Hàn the (Borax), Formol, Tinopal huỳnh quang, Javel tẩy trắng.
+### 🌟 Nội Dung Trọng Tâm
+1. **Hiệu chỉnh 7 điểm kỹ thuật & pháp lý:** Làm rõ mã nhóm thực phẩm chuẩn 06.4.3 (không nhầm lẫn với nhóm bột 06.2.1), cơ chế độ tan của Acid Sorbic, tính bền nhiệt của Acid Lactic, bản chất tạo gel của Amylose trong gạo.
+2. **Lưu ý pháp lý về hóa chất ngoài danh mục:** Lưu ý về Hàn the (Borax), Formol, Tinopal huỳnh quang, Javel tẩy trắng.
 3. **Bảng phụ gia chuẩn nhóm 06.4.3:** Giới hạn ML Sorbate (2.000 mg/kg), Phosphat STPP (2.500 mg P/kg), phụ gia GMP (Acid Lactic, Acid Citric, Tinh bột biến tính 1422, Xanthan gum, Guar gum).
-4. **So sánh 2 phương pháp:** Phương pháp có gia nhiệt (trong khối bột trước đùn - luộc) và Phương pháp không gia nhiệt (phun sương/ngâm bề mặt sau làm nguội).
-5. **Ma trận Hiệp đồng & Tương kỵ:** Khám phá công nghệ nhiều rào cản (Hurdle Technology: pH thấp + phụ gia + lạnh 4–8°C + bao gói kín).
-6. **Máy tính phối trộn tương tác:** Tính toán lượng cân tự động cho mẻ bột gạo khô ($B$), hệ số ra bún ($Y$), tỷ lệ lưu giữ ($R$) và tự động kiểm tra kịch bản xấu nhất ($R=1$).
-7. **Trị 7 nỗi đau sự cố:** Chẩn đoán và xử lý dứt điểm tình trạng bún thiu chua, chảy nhớt, đốm trắng, khô cứng qua đêm, bở nát khi chan nước lèo, tồn dư chập chờn.
+4. **Quy trình 2 phương pháp:** Phương pháp có gia nhiệt (trong khối bột trước đùn - luộc) và Phương pháp không gia nhiệt (phun sương/ngâm bề mặt sau làm nguội).
+5. **Ma trận Hiệp đồng & Tương kỵ:** Cơ sở hóa sinh và tương tác giữa các thành phần phụ gia trong công nghệ rào cản.
+6. **Máy tính phối trộn tương tác:** Tính toán lượng cân tham khảo cho mẻ bột gạo khô ($B$), hệ số ra bún ($Y$), tỷ lệ lưu giữ ($R$) và đối chiếu kịch bản giả định không thất thoát ($R=1$).
+7. **Xử lý 7 sự cố kỹ thuật thường gặp:** Phân tích nguyên nhân và giải pháp khắc phục tình trạng bún chua nhớt, đốm trắng, khô cứng qua đêm, bở nát khi chan nước lèo, tồn dư chập chờn.
 8. **Đọc Online & Tải File Gốc:** Xem trước và tải về file PDF (289 KB) cùng bản Word DOCX chuẩn.
 
 ---
