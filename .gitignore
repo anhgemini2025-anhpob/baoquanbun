@@ -1,0 +1,7 @@
+# Local temporary files
+extracted_doc_text.txt
+.system_generated/
+*.log
+.DS_Store
+Thumbs.db
+.vercel

@@ -1,0 +1,2394 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cẩm Nang Kỹ Thuật Sử Dụng Phụ Gia Bún Tươi Truyền Thống Việt Nam | Duy Anh Lab</title>
+  <meta name="description" content="Hướng dẫn sử dụng phụ gia an toàn, đúng chuẩn pháp lý Bộ Y tế 2024-2026 cho bún tươi nhóm 06.4.3. Tính toán phối trộn, hiệp đồng, khắc phục sự cố nhớt, chua, gãy nát.">
+  
+  <!-- Google Fonts: Inter & Be Vietnam Pro -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#FBBF24',
+              goldHover: '#F59E0B',
+              dark: '#0B1120',
+              card: '#111827',
+              border: '#1E293B',
+              accent: '#10B981',
+              danger: '#EF4444',
+              warning: '#F59E0B',
+              blue: '#38BDF8'
+            }
+          },
+          fontFamily: {
+            sans: ['"Be Vietnam Pro"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- KaTeX for beautiful math formulas -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+
+  <style>
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0b1120;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #334155;
+    }
+
+    .glass-panel {
+      background: rgba(17, 24, 39, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .glow-gold {
+      box-shadow: 0 0 25px -5px rgba(251, 191, 36, 0.25);
+    }
+    
+    .glow-accent {
+      box-shadow: 0 0 20px -3px rgba(16, 185, 129, 0.3);
+    }
+
+    /* Print styles for mixing formulation */
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+      #printArea, #printArea * {
+        visibility: visible;
+      }
+      #printArea {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        color: #000;
+        background: #fff;
+        padding: 20px;
+      }
+      .no-print {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-[#070b14] text-slate-200 font-sans antialiased selection:bg-brand-gold selection:text-slate-900 min-h-screen flex flex-col">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-amber-950/60 via-amber-900/40 to-slate-900 border-b border-amber-500/20 py-2 px-4 text-xs md:text-sm text-center text-amber-200/90 font-medium">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 flex-wrap">
+      <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/30">
+        <i data-lucide="shield-check" class="w-3.5 h-3.5 mr-1 inline"></i> Căn cứ 09/VBHN-BYT (2024)
+      </span>
+      <span>Nhóm thực phẩm chuẩn: <strong>06.4.3 - Sản phẩm dạng sợi đã làm chín</strong> (Bún tươi). Không nhầm lẫn nhóm bột 06.2.1.</span>
+      <a href="#can-cu-phap-ly" class="underline text-brand-gold hover:text-white font-semibold ml-1">Xem đối chiếu pháp lý &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-50 glass-panel border-b border-slate-800/80 transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3.5 group">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-400 via-amber-500 to-amber-700 flex items-center justify-center text-slate-950 shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform">
+          <i data-lucide="wheat" class="w-6 h-6 stroke-[2.2]"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-lg font-bold tracking-tight text-white group-hover:text-brand-gold transition-colors">BÚN TƯƠI VIỆT NAM</span>
+            <span class="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded bg-slate-800 text-brand-gold border border-slate-700">Kỹ thuật & An toàn</span>
+          </div>
+          <p class="text-xs text-slate-400">Hướng dẫn sử dụng phụ gia thực phẩm chuẩn hóa 2026</p>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden lg:flex items-center gap-1 xl:gap-2 text-sm font-medium text-slate-300">
+        <a href="#danh-muc-phu-gia" class="px-3 py-2 rounded-lg hover:text-brand-gold hover:bg-slate-800/50 transition-colors">Tra Cứu Phụ Gia</a>
+        <a href="#hai-phuong-phap" class="px-3 py-2 rounded-lg hover:text-brand-gold hover:bg-slate-800/50 transition-colors">Quy Trình 2 Phương Pháp</a>
+        <a href="#hiep-dong-tuong-ky" class="px-3 py-2 rounded-lg hover:text-brand-gold hover:bg-slate-800/50 transition-colors">Hiệp Đồng & Tương Kỵ</a>
+        <a href="#may-tinh-phoi-tron" class="px-3 py-2 rounded-lg text-brand-gold bg-amber-500/10 border border-amber-500/20 hover:bg-amber-500/20 transition-all font-semibold flex items-center gap-1.5">
+          <i data-lucide="calculator" class="w-4 h-4"></i> Máy Tính Phối Trộn
+        </a>
+        <a href="#khac-phuc-noi-dau" class="px-3 py-2 rounded-lg hover:text-brand-gold hover:bg-slate-800/50 transition-colors">Trị Nỗi Đau Nghề Bún</a>
+        <a href="#kiem-soat-chat-luong" class="px-3 py-2 rounded-lg hover:text-brand-gold hover:bg-slate-800/50 transition-colors">Kiểm Nghiệm</a>
+      </nav>
+
+      <!-- CTA Downloads & Actions -->
+      <div class="hidden sm:flex items-center gap-2.5">
+        <a href="Huong_dan_phu_gia_bun_tuoi.pdf" download="Huong_dan_phu_gia_bun_tuoi.pdf" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition shadow-sm" title="Tải văn bản tài liệu PDF gốc (289 KB)">
+          <i data-lucide="file-down" class="w-4 h-4 text-brand-gold"></i>
+          <span>Tải File PDF</span>
+          <span class="text-[10px] px-1.5 py-0.5 rounded bg-slate-900 text-slate-400 font-mono">290KB</span>
+        </a>
+        <a href="#lien-he-tu-van" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-bold bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 transition shadow-md shadow-amber-500/20">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
+          <span>Tư Vấn Kỹ Thuật</span>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobileMenuBtn" class="lg:hidden p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 focus:outline-none">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+
+    </div>
+
+    <!-- Mobile Nav Menu Dropdown -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-800 bg-[#0b1120] px-4 pt-3 pb-6 space-y-2">
+      <a href="#danh-muc-phu-gia" class="block px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-brand-gold hover:bg-slate-800">1. Tra Cứu Phụ Gia & Giới Hạn ML</a>
+      <a href="#hai-phuong-phap" class="block px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-brand-gold hover:bg-slate-800">2. Quy Trình 2 Phương Pháp (Gia nhiệt vs Bề mặt)</a>
+      <a href="#hiep-dong-tuong-ky" class="block px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-brand-gold hover:bg-slate-800">3. Ma Trận Hiệp Đồng & Tương Kỵ</a>
+      <a href="#may-tinh-phoi-tron" class="block px-3 py-2 rounded-lg text-sm font-semibold text-brand-gold bg-amber-500/10 border border-amber-500/20">4. Máy Tính Phối Trộn Mẻ Chuẩn (100kg Bột)</a>
+      <a href="#khac-phuc-noi-dau" class="block px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-brand-gold hover:bg-slate-800">5. Trị 7 Nỗi Đau Sự Cố (Chua, Nhớt, Đốm Trắng...)</a>
+      <a href="#kiem-soat-chat-luong" class="block px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-brand-gold hover:bg-slate-800">6. Kiểm Soát Chất Lượng & Pháp Lý</a>
+      <div class="pt-4 border-t border-slate-800 flex flex-col gap-2">
+        <a href="Huong_dan_phu_gia_bun_tuoi.pdf" download="Huong_dan_phu_gia_bun_tuoi.pdf" class="flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-semibold bg-slate-800 text-slate-200 border border-slate-700">
+          <i data-lucide="file-down" class="w-4 h-4 text-brand-gold"></i> Tải Cẩm Nang Kỹ Thuật PDF (289 KB)
+        </a>
+        <a href="#lien-he-tu-van" class="flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-bold bg-amber-500 text-slate-950">
+          <i data-lucide="message-square" class="w-4 h-4"></i> Liên Hệ Kỹ Sư Tư Vấn
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-12 pb-20 overflow-hidden border-b border-slate-800/80 bg-gradient-to-b from-slate-950 via-[#0a0f1d] to-[#070b14]">
+    <!-- Decorative background glow -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-amber-500/10 blur-[130px] rounded-full pointer-events-none"></div>
+    <div class="absolute top-10 right-10 w-96 h-96 bg-blue-500/5 blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Top Tagline & Meta Badges -->
+      <div class="flex flex-wrap items-center justify-center gap-2.5 mb-6 text-xs text-slate-300">
+        <span class="px-3 py-1 rounded-full bg-slate-800/80 border border-slate-700/80 flex items-center gap-1.5 shadow-sm">
+          <i data-lucide="user-check" class="w-3.5 h-3.5 text-brand-gold"></i>
+          <span>Tác giả: <strong>Nguyễn Đức Duy Anh</strong></span>
+        </span>
+        <span class="px-3 py-1 rounded-full bg-slate-800/80 border border-slate-700/80 flex items-center gap-1.5 shadow-sm">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-emerald-400"></i>
+          <span>Hotline: <strong>+84 908 095 693</strong></span>
+        </span>
+        <span class="px-3 py-1 rounded-full bg-slate-800/80 border border-slate-700/80 flex items-center gap-1.5 shadow-sm">
+          <i data-lucide="calendar" class="w-3.5 h-3.5 text-sky-400"></i>
+          <span>Phiên bản 1.0 &bull; Tháng 10/2026</span>
+        </span>
+        <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Đã kiểm chứng chuẩn khoa học</span>
+        </span>
+      </div>
+
+      <!-- Main Headline -->
+      <div class="text-center max-w-4xl mx-auto">
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight lg:leading-tight">
+          HƯỚNG DẪN KỸ THUẬT SỬ DỤNG PHỤ GIA CHO <br class="hidden sm:inline">
+          <span class="bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 bg-clip-text text-transparent">BÚN TƯƠI TRUYỀN THỐNG VIỆT NAM</span>
+        </h1>
+        <p class="mt-5 text-base sm:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed font-normal">
+          Khoa học công nghệ thực phẩm thực chiến kết hợp pháp lý Bộ Y tế 2024–2026. Giải pháp bảo quản sợi bún trắng trong, dẻo dai tự nhiên, <span class="text-brand-gold font-semibold">kéo dài thời gian bảo quản an toàn không nhớt, không chua</span> mà không vi phạm dư lượng hay sử dụng hóa chất cấm.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <a href="#may-tinh-phoi-tron" class="px-6 py-3.5 rounded-xl font-bold text-sm bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 transition shadow-lg shadow-amber-500/25 flex items-center gap-2">
+            <i data-lucide="calculator" class="w-4 h-4"></i>
+            <span>Mở Máy Tính Phối Trộn Mẻ Chuẩn</span>
+          </a>
+          <a href="#khac-phuc-noi-dau" class="px-6 py-3.5 rounded-xl font-semibold text-sm bg-slate-800/90 hover:bg-slate-700 text-white border border-slate-700 transition flex items-center gap-2">
+            <i data-lucide="stethoscope" class="w-4 h-4 text-emerald-400"></i>
+            <span>Chẩn Đoán 7 Sự Cố Lỗi Bún</span>
+          </a>
+          <button onclick="openPdfModal()" class="px-5 py-3.5 rounded-xl font-medium text-sm text-slate-200 hover:text-white bg-slate-800/90 hover:bg-slate-700 border border-slate-700 transition flex items-center gap-2 shadow-sm">
+            <i data-lucide="eye" class="w-4 h-4 text-sky-400"></i>
+            <span>Đọc Online Bản PDF</span>
+          </button>
+          <a href="Huong_dan_phu_gia_bun_tuoi.pdf" download="Huong_dan_phu_gia_bun_tuoi.pdf" class="px-5 py-3.5 rounded-xl font-medium text-sm text-slate-300 hover:text-white bg-slate-900/80 hover:bg-slate-800 border border-slate-800 transition flex items-center gap-2">
+            <i data-lucide="download" class="w-4 h-4 text-brand-gold"></i>
+            <span>Tải File PDF (290 KB)</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Quick 4-Pillar Stat Cards -->
+      <div class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4">
+        
+        <div class="glass-panel p-4 rounded-xl border border-slate-800">
+          <div class="flex items-center justify-between text-xs text-slate-400 mb-1">
+            <span>MÃ NHÓM THỰC PHẨM</span>
+            <i data-lucide="bookmark" class="w-4 h-4 text-brand-gold"></i>
+          </div>
+          <div class="text-2xl font-bold text-white font-mono">06.4.3</div>
+          <div class="text-xs text-slate-400 mt-1">Sản phẩm dạng sợi đã làm chín (bún tươi)</div>
+        </div>
+
+        <div class="glass-panel p-4 rounded-xl border border-slate-800">
+          <div class="flex items-center justify-between text-xs text-slate-400 mb-1">
+            <span>GIỚI HẠN ML SORBAT</span>
+            <i data-lucide="shield-alert" class="w-4 h-4 text-emerald-400"></i>
+          </div>
+          <div class="text-2xl font-bold text-emerald-400 font-mono">2.000 <span class="text-xs font-sans text-slate-400 font-normal">mg/kg</span></div>
+          <div class="text-xs text-slate-400 mt-1">Tính theo Acid Sorbic trên thành phẩm</div>
+        </div>
+
+        <div class="glass-panel p-4 rounded-xl border border-slate-800">
+          <div class="flex items-center justify-between text-xs text-slate-400 mb-1">
+            <span>GIỚI HẠN ML PHOSPHAT</span>
+            <i data-lucide="gauge" class="w-4 h-4 text-sky-400"></i>
+          </div>
+          <div class="text-2xl font-bold text-sky-400 font-mono">2.500 <span class="text-xs font-sans text-slate-400 font-normal">mg P/kg</span></div>
+          <div class="text-xs text-slate-400 mt-1">Quy theo P (STPP, Polyphosphat)</div>
+        </div>
+
+        <div class="glass-panel p-4 rounded-xl border border-slate-800">
+          <div class="flex items-center justify-between text-xs text-slate-400 mb-1">
+            <span>pH VÀNG HOẠT TÍNH</span>
+            <i data-lucide="activity" class="w-4 h-4 text-amber-400"></i>
+          </div>
+          <div class="text-2xl font-bold text-amber-400 font-mono">5,0 – 5,5</div>
+          <div class="text-xs text-slate-400 mt-1">Sorbat đạt tỷ lệ dạng kháng khuẩn cao nhất</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 1: Cảnh báo Sai lầm & Đính chính Pháp lý (Chương 1 & 2) -->
+  <section id="can-cu-phap-ly" class="py-16 bg-[#090e18] border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="max-w-3xl mb-12">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-red-500/10 text-red-400 border border-red-500/20 mb-3">
+          <i data-lucide="alert-triangle" class="w-3.5 h-3.5"></i> CẢNH BÁO PHÁP LÝ & KỸ THUẬT
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+          Đính Chính 7 Sai Lầm Nghiêm Trọng Trong Ngành Bún Tươi
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-2">
+          Nhiều cơ sở bún bị xử phạt vi phạm hành chính hoặc sản phẩm nhanh hỏng không phải do thiếu phụ gia, mà do hiểu sai bản chất hóa sinh và áp dụng sai quy chuẩn pháp lý.
+        </p>
+      </div>
+
+      <!-- Critical Mistake Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        
+        <!-- Card 1 -->
+        <div class="p-5 rounded-2xl bg-slate-900/80 border border-red-500/30 hover:border-red-500/60 transition shadow-sm">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-mono font-bold text-red-400 px-2 py-0.5 rounded bg-red-950/60 border border-red-800/40">LỖI PHÁP LÝ #1</span>
+            <i data-lucide="file-x" class="w-5 h-5 text-red-400"></i>
+          </div>
+          <h3 class="text-base font-bold text-white">Áp dụng nhầm mã nhóm 06.2.1 thay vì 06.4.3</h3>
+          <p class="text-xs text-red-300/90 mt-1 line-through">Hiểu sai: Bún làm từ bột gạo nên tra nhóm 06.2.1 (Flours - Bột).</p>
+          <div class="mt-3 p-3 rounded-xl bg-slate-950/60 border border-slate-800 text-xs text-slate-300">
+            <strong class="text-emerald-400 block mb-1">Hiệu chỉnh kỹ thuật:</strong>
+            Theo TT 24/2019 và Codex GSFA, bún tươi đã luộc chín thuộc <strong class="text-white">nhóm 06.4.3</strong> (Sản phẩm dạng sợi đã làm chín). Tra sai nhóm dẫn đến tự công bố sai phụ gia, bị đình chỉ lưu hành!
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="p-5 rounded-2xl bg-slate-900/80 border border-amber-500/30 hover:border-amber-500/60 transition shadow-sm">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-mono font-bold text-amber-400 px-2 py-0.5 rounded bg-amber-950/60 border border-amber-800/40">LỖI HÓA HỌC #2</span>
+            <i data-lucide="droplet-off" class="w-5 h-5 text-amber-400"></i>
+          </div>
+          <h3 class="text-base font-bold text-white">Cố hòa tan Acid Sorbic vào nước nhào</h3>
+          <p class="text-xs text-amber-300/90 mt-1 line-through">Hiểu sai: Cứ khuấy mạnh acid sorbic vào nước nhào bột là tan.</p>
+          <div class="mt-3 p-3 rounded-xl bg-slate-950/60 border border-slate-800 text-xs text-slate-300">
+            <strong class="text-emerald-400 block mb-1">Hiệu chỉnh kỹ thuật:</strong>
+            Acid Sorbic cực kỳ khó tan trong nước lạnh (~0,16 g/100 mL ở 20°C). Cố hòa tan sẽ gây vón cục tạo đốm trắng. <strong class="text-white">Phải dùng dạng bột siêu mịn trộn khô 1:10 với bột gạo</strong> hoặc đổi sang Kali Sorbat (tan 58 g/100 mL).
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="p-5 rounded-2xl bg-slate-900/80 border border-amber-500/30 hover:border-amber-500/60 transition shadow-sm">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-mono font-bold text-amber-400 px-2 py-0.5 rounded bg-amber-950/60 border border-amber-800/40">LỖI NHIỆT HỌC #3</span>
+            <i data-lucide="flame" class="w-5 h-5 text-amber-400"></i>
+          </div>
+          <h3 class="text-base font-bold text-white">Lầm tưởng Natri Diacetate "bền nhiệt"</h3>
+          <p class="text-xs text-amber-300/90 mt-1 line-through">Hiểu sai: Dùng Diacetate để vừa hạ pH vừa diệt khuẩn khi luộc 100°C.</p>
+          <div class="mt-3 p-3 rounded-xl bg-slate-950/60 border border-slate-800 text-xs text-slate-300">
+            <strong class="text-emerald-400 block mb-1">Hiệu chỉnh kỹ thuật:</strong>
+            Natri Diacetate giải phóng acid acetic rất dễ bay hơi theo hơi nước khi luộc bún. Để hạ pH bền nhiệt trong khối bột luộc 100°C, <strong class="text-white">Acid Lactic (INS 270)</strong> mới là acid bền nhiệt hoàn toàn không bay hơi!
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 transition shadow-sm">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-mono font-bold text-sky-400 px-2 py-0.5 rounded bg-sky-950/60 border border-sky-800/40">HIỂU SAI CƠ CHẾ #4</span>
+            <i data-lucide="atom" class="w-5 h-5 text-sky-400"></i>
+          </div>
+          <h3 class="text-base font-bold text-white">Nghĩ STPP tạo mạng "Protein - Gluten" cho gạo</h3>
+          <p class="text-xs text-slate-400 mt-1 line-through">Hiểu sai: Phosphat kích hoạt gluten làm bún dai như mì sợi.</p>
+          <div class="mt-3 p-3 rounded-xl bg-slate-950/60 border border-slate-800 text-xs text-slate-300">
+            <strong class="text-emerald-400 block mb-1">Hiệu chỉnh kỹ thuật:</strong>
+            Gạo gần như <strong class="text-white">không có protein gluten</strong>. Độ dai của bún chủ yếu từ Amylose thoái hóa tạo gel. STPP chỉ giữ nước, tạo cầu nối ion với Ca/Mg. STPP có tính kiềm, nếu cho quá nhiều sẽ làm tăng pH gây mất tác dụng của chất bảo quản!
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 transition shadow-sm">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-mono font-bold text-purple-400 px-2 py-0.5 rounded bg-purple-950/60 border border-purple-800/40">LẠM DỤNG PHỤ GIA #5</span>
+            <i data-lucide="layers" class="w-5 h-5 text-purple-400"></i>
+          </div>
+          <h3 class="text-base font-bold text-white">Cho quá nhiều Tinh bột biến tính & Gum</h3>
+          <p class="text-xs text-slate-400 mt-1 line-through">Hiểu sai: Càng cho nhiều tinh bột biến tính và xanthan gum bún càng dai.</p>
+          <div class="mt-3 p-3 rounded-xl bg-slate-950/60 border border-slate-800 text-xs text-slate-300">
+            <strong class="text-emerald-400 block mb-1">Hiệu chỉnh kỹ thuật:</strong>
+            Sợi bún cần một mức thoái hóa amylose tự nhiên vừa đủ để định hình sợi. Lạm dụng tinh bột biến tính (>15%) và gum (>0,5%) sẽ giữ nước quá mức khiến <strong class="text-white">sợi bún bị mềm, nhũn bở, dễ đứt khi chan nước lèo nóng</strong>.
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="p-5 rounded-2xl bg-slate-900/80 border border-red-500/30 hover:border-red-500/60 transition shadow-sm">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-mono font-bold text-red-400 px-2 py-0.5 rounded bg-red-950/60 border border-red-800/40">RỦI RO KIỂM NGHIỆM #6</span>
+            <i data-lucide="flask-conical" class="w-5 h-5 text-red-400"></i>
+          </div>
+          <h3 class="text-base font-bold text-white">Dùng Benzoat & Propionat chưa xác minh cho bún</h3>
+          <p class="text-xs text-red-300/90 mt-1 line-through">Hiểu sai: Natri Benzoat rẻ tiền cứ ngâm bún là chống mốc tốt.</p>
+          <div class="mt-3 p-3 rounded-xl bg-slate-950/60 border border-slate-800 text-xs text-slate-300">
+            <strong class="text-emerald-400 block mb-1">Hiệu chỉnh kỹ thuật:</strong>
+            Benzoat chỉ tác dụng khi pH < 4,5. Hơn nữa, <strong class="text-white">Benzoat và Propionat chưa được xác minh trong Phụ lục 2A cho nhóm bún 06.4.3</strong>. Dùng tùy tiện sẽ bị coi là sử dụng phụ gia ngoài danh mục cho phép đối với nhóm hàng!
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Legal Framework Bar & Absolutely Banned Additives -->
+      <div class="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-6">
+        
+        <!-- Banned Additives Warning Banner (Red Zone) -->
+        <div class="lg:col-span-2 p-6 rounded-2xl bg-gradient-to-r from-red-950/60 via-red-900/40 to-slate-900 border border-red-500/40 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 text-red-400 font-bold text-sm mb-2">
+              <i data-lucide="skull" class="w-5 h-5"></i>
+              <span>CẢNH BÁO TỐI CAO: CÁC HÓA CHẤT CẤM TUYỆT ĐỐI TRONG SẢN XUẤT BÚN</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-300 mb-4 leading-relaxed">
+              Các chất sau đây <strong>HOÀN TOÀN KHÔNG CÓ TRONG DANH MỤC PHỤ GIA THỰC PHẨM</strong>. Việc sử dụng cấu thành tội hình sự theo Điều 317 Bộ Luật Hình Sự về Vi phạm quy định an toàn thực phẩm:
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+              <div class="p-2.5 rounded-lg bg-black/40 border border-red-500/30 text-center">
+                <span class="font-bold text-red-300 block">HÀN THE (Borax)</span>
+                <span class="text-[10px] text-slate-400">Gây suy thận, ngộ độc gan cấp & mãn tính</span>
+              </div>
+              <div class="p-2.5 rounded-lg bg-black/40 border border-red-500/30 text-center">
+                <span class="font-bold text-red-300 block">FORMOL (Formaldehyde)</span>
+                <span class="text-[10px] text-slate-400">Chất gây ung thư, dùng ướp xác</span>
+              </div>
+              <div class="p-2.5 rounded-lg bg-black/40 border border-red-500/30 text-center">
+                <span class="font-bold text-red-300 block">TINOPAL</span>
+                <span class="text-[10px] text-slate-400">Chất tẩy trắng huỳnh quang công nghiệp</span>
+              </div>
+              <div class="p-2.5 rounded-lg bg-black/40 border border-red-500/30 text-center">
+                <span class="font-bold text-red-300 block">JAVEL / CHLORINE</span>
+                <span class="text-[10px] text-slate-400">Tẩy trắng bún sinh dioxin & clo độc hại</span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 pt-3 border-t border-red-500/20 text-xs text-red-200/80 flex items-center justify-between">
+            <span>&bull; Cơ sở chế biến phải cam kết 100% nói KHÔNG với hóa chất cấm.</span>
+            <span class="font-mono text-red-400">Điều 317 BLHS</span>
+          </div>
+        </div>
+
+        <!-- Legal References Summary Box -->
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 text-brand-gold font-bold text-sm mb-2">
+              <i data-lucide="scale" class="w-5 h-5"></i>
+              <span>CĂN CỨ PHÁP LÝ HIỆN HÀNH</span>
+            </div>
+            <ul class="space-y-2.5 text-xs text-slate-300">
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold shrink-0 mt-0.5"></i>
+                <span><strong>09/VBHN-BYT (06/09/2024):</strong> Văn bản hợp nhất quản lý phụ gia thực phẩm hiện hành.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold shrink-0 mt-0.5"></i>
+                <span><strong>TT 24/2019 + TT 17/2023 + TT 08/2024:</strong> Danh mục phụ gia và mức sử dụng tối đa (ML).</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold shrink-0 mt-0.5"></i>
+                <span><strong>Nghị định 15/2018/NĐ-CP:</strong> Quy định chi tiết thi hành Luật An toàn thực phẩm và Tự công bố.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold shrink-0 mt-0.5"></i>
+                <span><strong>Codex GSFA CXS 192-1995:</strong> Nhóm 06.4.3 sản phẩm dạng sợi đã làm chín.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] text-slate-400">
+            * ML tính trên bún thành phẩm lưu thông, không tính trên khối bột khô chưa nấu.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 2: Bảng Tra Cứu Phụ Gia Chuẩn Nhóm 06.4.3 (Chương 3) -->
+  <section id="danh-muc-phu-gia" class="py-16 bg-[#070b14] border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+        <div>
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-brand-gold border border-amber-500/20 mb-3">
+            <i data-lucide="database" class="w-3.5 h-3.5"></i> CHƯƠNG 3: DANH MỤC TIÊU CHUẨN
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+            Bảng Phụ Gia & Giới Hạn ML Cho Bún Tươi (Nhóm 06.4.3)
+          </h2>
+          <p class="text-slate-400 text-sm mt-1">
+            Tra cứu cơ chế, liều thử thực hành, chức năng và tình trạng pháp lý chuẩn xác theo Văn bản hợp nhất 09/VBHN-BYT.
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap items-center gap-1.5 bg-slate-900/90 p-1.5 rounded-xl border border-slate-800 text-xs">
+          <button onclick="filterAdditives('all')" class="filter-btn active px-3 py-1.5 rounded-lg font-semibold bg-brand-gold text-slate-950 transition">Tất Cả</button>
+          <button onclick="filterAdditives('preservative')" class="filter-btn px-3 py-1.5 rounded-lg text-slate-300 hover:text-white transition">Bảo Quản</button>
+          <button onclick="filterAdditives('texture')" class="filter-btn px-3 py-1.5 rounded-lg text-slate-300 hover:text-white transition">Tạo Dai / Giữ Nước</button>
+          <button onclick="filterAdditives('ph')" class="filter-btn px-3 py-1.5 rounded-lg text-slate-300 hover:text-white transition">Chỉnh pH</button>
+          <button onclick="filterAdditives('gmp')" class="filter-btn px-3 py-1.5 rounded-lg text-slate-300 hover:text-white transition">Phụ Lục 3 (GMP)</button>
+        </div>
+      </div>
+
+      <!-- Additive Table Container -->
+      <div class="overflow-x-auto rounded-2xl border border-slate-800 glass-panel shadow-xl">
+        <table class="w-full text-left text-xs sm:text-sm text-slate-300">
+          <thead class="bg-slate-900/90 text-slate-400 text-xs uppercase tracking-wider border-b border-slate-800">
+            <tr>
+              <th scope="col" class="py-4 px-4 font-semibold text-slate-200">Mã INS</th>
+              <th scope="col" class="py-4 px-4 font-semibold text-slate-200">Tên Phụ Gia</th>
+              <th scope="col" class="py-4 px-4 font-semibold text-slate-200">Chức Năng Chính</th>
+              <th scope="col" class="py-4 px-4 font-semibold text-slate-200">ML Tham Chiếu (Thành phẩm)</th>
+              <th scope="col" class="py-4 px-4 font-semibold text-slate-200">Liều Thử Khởi Đầu</th>
+              <th scope="col" class="py-4 px-4 font-semibold text-slate-200">Trạng Thái Pháp Lý</th>
+              <th scope="col" class="py-4 px-4 font-semibold text-slate-200">Lưu Ý Kỹ Thuật</th>
+            </tr>
+          </thead>
+          <tbody id="additiveTableBody" class="divide-y divide-slate-800/60 font-normal">
+            
+            <!-- Row: Sorbic / Kali Sorbat -->
+            <tr class="additive-row hover:bg-slate-800/40 transition" data-category="preservative">
+              <td class="py-4 px-4 font-mono font-bold text-brand-gold">200, 202, 203</td>
+              <td class="py-4 px-4 font-semibold text-white">
+                <div>Acid Sorbic, Kali Sorbat, Canxi Sorbat</div>
+                <div class="text-[11px] text-slate-400 font-normal">Sorbates</div>
+              </td>
+              <td class="py-4 px-4">
+                <span class="inline-flex items-center px-2 py-0.5 rounded text-xs bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-medium">Chống mốc & nấm men</span>
+              </td>
+              <td class="py-4 px-4 font-mono text-emerald-400 font-bold">2.000 mg/kg</td>
+              <td class="py-4 px-4 font-mono text-slate-200">0,3 – 0,45% bột khô</td>
+              <td class="py-4 px-4">
+                <span class="inline-flex items-center gap-1 text-xs text-amber-300 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/20 font-medium">
+                  <i data-lucide="file-check" class="w-3 h-3"></i> Cần đối chiếu PL2A
+                </span>
+              </td>
+              <td class="py-4 px-4 text-xs text-slate-300">
+                Hiệu quả tối ưu khi pH < 5,5 (pKa 4,76). Mất tác dụng khi pH > 6,5.
+              </td>
+            </tr>
+
+            <!-- Row: STPP / Phosphat -->
+            <tr class="additive-row hover:bg-slate-800/40 transition" data-category="texture">
+              <td class="py-4 px-4 font-mono font-bold text-sky-400">451(i), 452(i)</td>
+              <td class="py-4 px-4 font-semibold text-white">
+                <div>STPP, Natri Polyphosphat</div>
+                <div class="text-[11px] text-slate-400 font-normal">Phosphates</div>
+              </td>
+              <td class="py-4 px-4">
+                <span class="inline-flex items-center px-2 py-0.5 rounded text-xs bg-sky-500/10 text-sky-400 border border-sky-500/20 font-medium">Giữ nước, tạo độ dai, bóng</span>
+              </td>
+              <td class="py-4 px-4 font-mono text-sky-400 font-bold">2.500 mg P/kg</td>
+              <td class="py-4 px-4 font-mono text-slate-200">0,1 – 0,3% bột khô</td>
+              <td class="py-4 px-4">
+                <span class="inline-flex items-center gap-1 text-xs text-amber-300 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/20 font-medium">
+                  <i data-lucide="file-check" class="w-3 h-3"></i> Cần đối chiếu PL2A
+                </span>
+              </td>
+              <td class="py-4 px-4 text-xs text-slate-300">
+                STPP có tính kiềm, làm tăng pH khối bột. Phải kiểm tra trừ phospho nền của gạo.
+              </td>
+            </tr>
+
+            <!-- Row: Acid Lactic -->
+            <tr class="additive-row hover:bg-slate-800/40 transition" data-category="ph gmp">
+              <td class="py-4 px-4 font-mono font-bold text-emerald-400">270</td>
+              <td class="py-4 px-4 font-semibold text-white">
+                <div>Acid Lactic</div>
+                <div class="text-[11px] text-slate-400 font-normal">Lactic acid</div>
+              </td>
+              <td class="py-4 px-4">
+                <span class="inline-flex items-center px-2 py-0.5 rounded text-xs bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-medium">Hạ pH khối bột, bền nhiệt</span>
+              </td>
+              <td class="py-4 px-4 font-mono text-slate-300">GMP (Không giới hạn số)</td>
+              <td class="py-4 px-4 font-mono text-slate-200">Theo pH mục tiêu (5.0-5.5)</td>
+              <td class="py-4 px-4">
+                <span class="inline-flex items-center gap-1 text-xs text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 font-medium">
+                  <i data-lucide="check-circle" class="w-3 h-3"></i> Phụ lục 3 (GMP)
+                </span>
+              </td>
+              <td class="py-4 px-4 text-xs text-slate-300">
+                Bền nhiệt 100°C, không bay hơi. Tăng tỷ lệ dạng không phân ly của Sorbat.
+              </td>
+            </tr>
+
+            <!-- Row: Acid Citric -->
+            <tr class="additive-row hover:bg-slate-800/40 transition" data-category="ph gmp">
+              <td class="py-4 px-4 font-mono font-bold text-emerald-400">330</td>
+              <td class="py-4 px-4 font-semibold text-white">
+                <div>Acid Citric</div>
+                <div class="text-[11px] text-slate-400 font-normal">Citric acid (Acid chanh)</div>
+              </td>
+              <td class="py-4 px-4">
+                <span class="inline-flex items-center px-2 py-0.5 rounded text-xs bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-medium">Hạ pH dung dịch phun bề mặt</span>
+              </td>
+              <td class="py-4 px-4 font-mono text-slate-300">GMP (Không giới hạn số)</td>
+              <td class="py-4 px-4 font-mono text-slate-200">0,1 – 0,5% trong dd phun</td>
+              <td class="py-4 px-4">
+                <span class="inline-flex items-center gap-1 text-xs text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 font-medium">
+                  <i data-lucide="check-circle" class="w-3 h-3"></i> Phụ lục 3 (GMP)
+                </span>
+              </td>
+              <td class="py-4 px-4 text-xs text-slate-300">
+                Chỉ cho vào sau khi Kali Sorbat đã tan. Không pha quá chua làm chua vị bún.
+              </td>
+            </tr>
+
+            <!-- Row: Tinh bột biến tính -->
+            <tr class="additive-row hover:bg-slate-800/40 transition" data-category="texture gmp">
+              <td class="py-4 px-4 font-mono font-bold text-purple-400">1414, 1420, 1422</td>
+              <td class="py-4 px-4 font-semibold text-white">
+                <div>Tinh Bột Biến Tính</div>
+                <div class="text-[11px] text-slate-400 font-normal">Modified starches</div>
+              </td>
+              <td class="py-4 px-4">
+                <span class="inline-flex items-center px-2 py-0.5 rounded text-xs bg-purple-500/10 text-purple-400 border border-purple-500/20 font-medium">Tạo đàn hồi, chậm cứng sợi qua đêm</span>
+              </td>
+              <td class="py-4 px-4 font-mono text-slate-300">GMP (Không giới hạn số)</td>
+              <td class="py-4 px-4 font-mono text-slate-200">5 – 15% (thay thế bột gạo)</td>
+              <td class="py-4 px-4">
+                <span class="inline-flex items-center gap-1 text-xs text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 font-medium">
+                  <i data-lucide="check-circle" class="w-3 h-3"></i> Phụ lục 3 (GMP)
+                </span>
+              </td>
+              <td class="py-4 px-4 text-xs text-slate-300">
+                Làm chậm thoái hóa amylose. Dùng quá nhiều (>15%) làm bún mềm nhão, đứt gãy.
+              </td>
+            </tr>
+
+            <!-- Row: Xanthan Gum -->
+            <tr class="additive-row hover:bg-slate-800/40 transition" data-category="texture gmp">
+              <td class="py-4 px-4 font-mono font-bold text-purple-400">415</td>
+              <td class="py-4 px-4 font-semibold text-white">
+                <div>Xanthan Gum</div>
+                <div class="text-[11px] text-slate-400 font-normal">Xanthan gum</div>
+              </td>
+              <td class="py-4 px-4">
+                <span class="inline-flex items-center px-2 py-0.5 rounded text-xs bg-purple-500/10 text-purple-400 border border-purple-500/20 font-medium">Kết dính khối bột khi đùn, giữ nước</span>
+              </td>
+              <td class="py-4 px-4 font-mono text-slate-300">GMP (Không giới hạn số)</td>
+              <td class="py-4 px-4 font-mono text-slate-200">0,1 – 0,3% bột khô</td>
+              <td class="py-4 px-4">
+                <span class="inline-flex items-center gap-1 text-xs text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 font-medium">
+                  <i data-lucide="check-circle" class="w-3 h-3"></i> Phụ lục 3 (GMP)
+                </span>
+              </td>
+              <td class="py-4 px-4 text-xs text-slate-300">
+                Phải trộn khô thật đều với bột gạo trước khi cho nước để tránh vón ốc trâu.
+              </td>
+            </tr>
+
+            <!-- Row: Guar Gum -->
+            <tr class="additive-row hover:bg-slate-800/40 transition" data-category="texture gmp">
+              <td class="py-4 px-4 font-mono font-bold text-purple-400">412</td>
+              <td class="py-4 px-4 font-semibold text-white">
+                <div>Guar Gum</div>
+                <div class="text-[11px] text-slate-400 font-normal">Guar gum</div>
+              </td>
+              <td class="py-4 px-4">
+                <span class="inline-flex items-center px-2 py-0.5 rounded text-xs bg-purple-500/10 text-purple-400 border border-purple-500/20 font-medium">Tăng độ dai và liên kết sợi</span>
+              </td>
+              <td class="py-4 px-4 font-mono text-slate-300">GMP (Không giới hạn số)</td>
+              <td class="py-4 px-4 font-mono text-slate-200">0,2 – 0,5% bột khô</td>
+              <td class="py-4 px-4">
+                <span class="inline-flex items-center gap-1 text-xs text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 font-medium">
+                  <i data-lucide="check-circle" class="w-3 h-3"></i> Phụ lục 3 (GMP)
+                </span>
+              </td>
+              <td class="py-4 px-4 text-xs text-slate-300">
+                Phối hợp tỷ lệ 1:1 với Xanthan gum tạo hiệp đồng tăng nhớt rất tốt.
+              </td>
+            </tr>
+
+            <!-- Row: Benzoat (Chưa xác minh) -->
+            <tr class="additive-row hover:bg-slate-800/40 transition bg-red-950/20" data-category="preservative">
+              <td class="py-4 px-4 font-mono font-bold text-red-400">210 – 213</td>
+              <td class="py-4 px-4 font-semibold text-slate-300">
+                <div>Natri Benzoat, Acid Benzoic</div>
+                <div class="text-[11px] text-red-400 font-medium">CHƯA XÁC MINH CHO 06.4.3</div>
+              </td>
+              <td class="py-4 px-4 text-slate-400">Chống nấm men, vi khuẩn</td>
+              <td class="py-4 px-4 font-mono text-red-400">CHƯA CÓ TRONG 06.4.3</td>
+              <td class="py-4 px-4 text-slate-500">&mdash; TẠM DỪNG &mdash;</td>
+              <td class="py-4 px-4">
+                <span class="inline-flex items-center gap-1 text-xs text-red-400 bg-red-500/10 px-2 py-0.5 rounded border border-red-500/30 font-medium">
+                  <i data-lucide="x-circle" class="w-3 h-3"></i> Chưa dùng
+                </span>
+              </td>
+              <td class="py-4 px-4 text-xs text-red-300/80">
+                Chỉ hoạt động ở pH < 4,5. Phải đối chiếu Phụ lục 2A trước khi đưa vào hồ sơ tự công bố!
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Footnote guidance -->
+      <div class="mt-4 p-4 rounded-xl bg-slate-900/60 border border-slate-800 text-xs text-slate-400 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <div class="flex items-center gap-2">
+          <i data-lucide="info" class="w-4 h-4 text-brand-gold shrink-0"></i>
+          <span><strong>Quy tắc GMP (Thực hành sản xuất tốt):</strong> Dùng lượng tối thiểu vừa đủ đạt hiệu quả công nghệ, không được lạm dụng để che giấu nguyên liệu bột gạo kém phẩm chất hoặc lỗi vệ sinh xưởng.</span>
+        </div>
+        <a href="#can-cu-phap-ly" class="text-brand-gold hover:underline whitespace-nowrap font-medium">Cách đối chiếu Phụ lục 2A &rarr;</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 3: Quy Trình 2 Phương Pháp Thực Chiến (Chương 4, 5 & 9) -->
+  <section id="hai-phuong-phap" class="py-16 bg-[#090e18] border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/10 text-sky-400 border border-sky-500/20 mb-3">
+          <i data-lucide="workflow" class="w-3.5 h-3.5"></i> CÔNG NGHỆ CHẾ BIẾN CẦM TAY CHỈ VIỆC
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+          So Sánh & Quy Trình 2 Phương Pháp Bổ Sung Phụ Gia
+        </h2>
+        <p class="text-slate-400 text-sm mt-2">
+          Bảo vệ toàn diện từ "Lõi sợi bún" (phương pháp có gia nhiệt) đến "Bề mặt sợi bún" (phương pháp không gia nhiệt) theo triết lý Rào Cản Vi Sinh (Hurdle Technology).
+        </p>
+      </div>
+
+      <!-- Method Switcher Cards -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        
+        <!-- Method 1: Có gia nhiệt -->
+        <div class="p-6 rounded-2xl glass-panel border border-amber-500/30 hover:border-amber-500/50 transition flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider bg-amber-500/20 text-amber-300 border border-amber-500/30">
+                PHƯƠNG PHÁP 1: CÓ GIA NHIỆT
+              </span>
+              <span class="text-xs text-slate-400 font-mono">Trộn khối bột &rarr; Đùn sợi &rarr; Luộc 100°C</span>
+            </div>
+            
+            <h3 class="text-xl font-bold text-white mb-2">Trộn Trong Khối Bột Trước Khi Luộc</h3>
+            <p class="text-xs text-slate-300 leading-relaxed mb-6">
+              Phụ gia được phân tán đồng đều từ lõi ra vỏ sợi bún. Khi đùn và luộc ở ~100°C, tinh bột hồ hóa và khóa chặt phụ gia trong cấu trúc gel.
+            </p>
+
+            <!-- 5 Steps Execution -->
+            <div class="space-y-3 mb-6">
+              <h4 class="text-xs font-bold text-brand-gold uppercase tracking-wider">Quy trình 5 bước vàng chuẩn bị mẻ:</h4>
+              
+              <div class="flex items-start gap-3 p-2.5 rounded-lg bg-slate-900/80 border border-slate-800 text-xs">
+                <span class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-300 font-bold flex items-center justify-center shrink-0 text-[11px]">1</span>
+                <div>
+                  <strong class="text-white">Cân chính xác:</strong> Dùng cân điện tử sai số &le; 1g theo phiếu tính mẻ bột chuẩn (Chương 7).
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 p-2.5 rounded-lg bg-slate-900/80 border border-slate-800 text-xs">
+                <span class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-300 font-bold flex items-center justify-center shrink-0 text-[11px]">2</span>
+                <div>
+                  <strong class="text-white">Trộn khô trước:</strong> Tinh bột biến tính + Xanthan Gum + (Acid Sorbic dạng bột mịn nếu dùng) trộn khô với bột gạo khô theo tỷ lệ 1:10 để chống vón cục.
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 p-2.5 rounded-lg bg-slate-900/80 border border-slate-800 text-xs">
+                <span class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-300 font-bold flex items-center justify-center shrink-0 text-[11px]">3</span>
+                <div>
+                  <strong class="text-white">Hòa tan STPP:</strong> Cho STPP hòa tan hoàn toàn vào 50% lượng nước nhào, đổ vào cối nhào trước để STPP phân tán vào hạt tinh bột.
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 p-2.5 rounded-lg bg-slate-900/80 border border-slate-800 text-xs">
+                <span class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-300 font-bold flex items-center justify-center shrink-0 text-[11px]">4</span>
+                <div>
+                  <strong class="text-white">Hòa tan Kali Sorbat:</strong> Hòa tan vào phần nước nhào còn lại rồi cho vào cối trộn tiếp.
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 p-2.5 rounded-lg bg-slate-900/80 border border-slate-800 text-xs">
+                <span class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-300 font-bold flex items-center justify-center shrink-0 text-[11px]">5</span>
+                <div>
+                  <strong class="text-white">Acid Lactic cho sau cùng:</strong> Nhỏ Acid Lactic vào cuối cùng để đưa pH khối bột về 5,0 – 5,5 (dùng máy đo pH kiểm tra trước khi đùn).
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Pros and Cons -->
+            <div class="grid grid-cols-2 gap-3 text-xs">
+              <div class="p-3 rounded-xl bg-emerald-950/20 border border-emerald-500/30">
+                <strong class="text-emerald-400 block mb-1 flex items-center gap-1">
+                  <i data-lucide="check" class="w-3.5 h-3.5"></i> Ưu điểm
+                </strong>
+                <ul class="space-y-1 text-slate-300 text-[11px]">
+                  <li>&bull; Bảo vệ từ lõi ra vỏ sợi bún</li>
+                  <li>&bull; Cải thiện độ dai, giảm gãy sợi</li>
+                  <li>&bull; Không tốn thêm công đoạn sau luộc</li>
+                </ul>
+              </div>
+              <div class="p-3 rounded-xl bg-amber-950/20 border border-amber-500/30">
+                <strong class="text-amber-400 block mb-1 flex items-center gap-1">
+                  <i data-lucide="alert-circle" class="w-3.5 h-3.5"></i> Điểm cần kiểm soát
+                </strong>
+                <ul class="space-y-1 text-slate-300 text-[11px]">
+                  <li>&bull; Hao hụt qua nước luộc (tỷ lệ R)</li>
+                  <li>&bull; Acid Sorbic bay hơi theo hơi nước</li>
+                  <li>&bull; STPP làm tăng pH nếu thiếu acid lactic</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-800 text-[11px] text-slate-400 flex items-center justify-between">
+            <span>Thông số đo: <strong>Tỷ lệ lưu giữ R (0,7 – 0,8)</strong></span>
+            <span class="text-amber-400 font-medium">Bắt buộc đo HPLC định kỳ</span>
+          </div>
+
+        </div>
+
+        <!-- Method 2: Không gia nhiệt -->
+        <div class="p-6 rounded-2xl glass-panel border border-sky-500/30 hover:border-sky-500/50 transition flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider bg-sky-500/20 text-sky-300 border border-sky-500/30">
+                PHƯƠNG PHÁP 2: KHÔNG GIA NHIỆT
+              </span>
+              <span class="text-xs text-slate-400 font-mono">Luộc chín &rarr; Làm nguội &rarr; Phun / Ngâm</span>
+            </div>
+            
+            <h3 class="text-xl font-bold text-white mb-2">Xử Lý Phun Sương / Ngâm Bề Mặt</h3>
+            <p class="text-xs text-slate-300 leading-relaxed mb-6">
+              Tạo màng bảo vệ trực tiếp trên bề mặt sợi bún sau khi làm nguội &mdash; nơi tiếp xúc trực tiếp với vi sinh vật từ không khí, tay công nhân và dụng cụ chứa.
+            </p>
+
+            <!-- Operation Parameters -->
+            <div class="space-y-3 mb-6">
+              <h4 class="text-xs font-bold text-sky-400 uppercase tracking-wider">3 Thông số vận hành sống còn:</h4>
+
+              <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-xs">
+                <div class="flex items-center justify-between mb-1">
+                  <strong class="text-white">1. Nồng độ dung dịch & Công thức pha:</strong>
+                  <span class="text-sky-400 font-mono font-bold">Kali Sorbat + Acid Citric</span>
+                </div>
+                <p class="text-slate-300 text-[11px]">
+                  Hòa tan Kali Sorbat trước (~15 - 25 g/L). Thêm từ từ Acid Citric (1 - 3 g/L) để hạ pH dung dịch xuống ~5,0. Không pha quá đậm làm acid sorbic kết tủa thành cặn trắng!
+                </p>
+              </div>
+
+              <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-xs">
+                <div class="flex items-center justify-between mb-1">
+                  <strong class="text-white">2. Hệ số bám dung dịch (U):</strong>
+                  <span class="text-sky-400 font-mono font-bold">U &approx; 0,02 – 0,04 kg/kg</span>
+                </div>
+                <p class="text-slate-300 text-[11px]">
+                  Đo bằng công thức: <code class="text-amber-300 font-mono">U = (Khối lượng sau phun - trước phun) / trước phun</code>. Ngâm nhúng nhanh 5–10 giây rồi rung lắc ráo ngay, tránh bún ngậm nước gây bết dính.
+                </p>
+              </div>
+
+              <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-xs">
+                <div class="flex items-center justify-between mb-1">
+                  <strong class="text-white">3. Chu kỳ thay dung dịch:</strong>
+                  <span class="text-emerald-400 font-mono font-bold">Thay mỗi ca sản xuất</span>
+                </div>
+                <p class="text-slate-300 text-[11px]">
+                  Dung dịch dùng đi dùng lại sẽ tích tụ tinh bột bở ra từ bún và trở thành ổ nhiễm chéo vi sinh. Phải lọc dịch, vệ sinh bể và vòi phun hàng ngày.
+                </p>
+              </div>
+
+            </div>
+
+            <!-- Pros and Cons -->
+            <div class="grid grid-cols-2 gap-3 text-xs">
+              <div class="p-3 rounded-xl bg-emerald-950/20 border border-emerald-500/30">
+                <strong class="text-emerald-400 block mb-1 flex items-center gap-1">
+                  <i data-lucide="check" class="w-3.5 h-3.5"></i> Ưu điểm
+                </strong>
+                <ul class="space-y-1 text-slate-300 text-[11px]">
+                  <li>&bull; Không bị mất qua nước luộc 100°C</li>
+                  <li>&bull; Diệt nấm men, mốc ngay tại bề mặt</li>
+                  <li>&bull; Dễ điều chỉnh nồng độ theo mùa</li>
+                </ul>
+              </div>
+              <div class="p-3 rounded-xl bg-amber-950/20 border border-amber-500/30">
+                <strong class="text-amber-400 block mb-1 flex items-center gap-1">
+                  <i data-lucide="alert-circle" class="w-3.5 h-3.5"></i> Điểm cần kiểm soát
+                </strong>
+                <ul class="space-y-1 text-slate-300 text-[11px]">
+                  <li>&bull; Không ngấm vào sâu lõi sợi</li>
+                  <li>&bull; Dễ quá liều cục bộ nếu đọng nước</li>
+                  <li>&bull; Phải cộng dồn liều: Tổng &le; ML</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-800 text-[11px] text-slate-400 flex items-center justify-between">
+            <span>Nguyên tắc: <strong>Lượng trong bột + Lượng bề mặt &le; 2.000 mg/kg</strong></span>
+            <span class="text-sky-400 font-medium">Bổ trợ hoàn hảo</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Chapter 9 Summary Comparison Table -->
+      <div class="mt-12 glass-panel p-6 rounded-2xl border border-slate-800">
+        <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+          <i data-lucide="split" class="w-5 h-5 text-brand-gold"></i>
+          <span>Bảng Đối Chiếu Tổng Thể 2 Phương Pháp (Chương 9)</span>
+        </h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs text-left text-slate-300">
+            <thead class="bg-slate-900 text-slate-400 uppercase text-[11px]">
+              <tr>
+                <th class="p-3">Tiêu chí so sánh</th>
+                <th class="p-3 text-amber-300">Có Gia Nhiệt (Trộn trong bột)</th>
+                <th class="p-3 text-sky-300">Không Gia Nhiệt (Phun/ngâm bề mặt)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/80">
+              <tr>
+                <td class="p-3 font-semibold text-white">Phụ gia chính áp dụng</td>
+                <td class="p-3">Kali Sorbat / Acid Sorbic, Acid Lactic, STPP, Tinh bột biến tính, Xanthan Gum</td>
+                <td class="p-3">Kali Sorbat + Acid Citric</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-semibold text-white">Phạm vi bảo vệ</td>
+                <td class="p-3 text-emerald-400 font-medium">Toàn bộ khối sợi (từ lõi ra ngoài)</td>
+                <td class="p-3 text-sky-400 font-medium">Lớp màng bảo vệ bề mặt sợi</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-semibold text-white">Thất thoát qua nước & nhiệt</td>
+                <td class="p-3 text-amber-400">Có (khoảng 20–30% tan vào nước luộc hoặc bay hơi)</td>
+                <td class="p-3 text-emerald-400">Gần như không hao hụt nhiệt (tiết kiệm phụ gia)</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-semibold text-white">Rủi ro kỹ thuật lớn nhất</td>
+                <td class="p-3 text-red-300">STPP làm tăng pH làm vô hiệu hóa Sorbat; bão hòa nước luộc</td>
+                <td class="p-3 text-red-300">Dung dịch nhiễm chéo vi sinh; tồn dư cục bộ do không ráo nước</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-semibold text-white">Căn cứ tính pháp lý ML</td>
+                <td class="p-3 font-mono">Dư lượng thực đo trên thành phẩm &le; 2.000 mg/kg</td>
+                <td class="p-3 font-mono">Cộng dồn: C(lõi) + C(bề mặt) &le; 2.000 mg/kg</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 4: Ma Trận Hiệp Đồng & Tương Kỵ (Chương 6) -->
+  <section id="hiep-dong-tuong-ky" class="py-16 bg-[#070b14] border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-3">
+          <i data-lucide="git-merge" class="w-3.5 h-3.5"></i> HÓA SINH THỰC PHẨM CHUYÊN SÂU
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+          Hiệp Đồng & Tương Kỵ Giữa Các Loại Phụ Gia (Chương 6)
+        </h2>
+        <p class="text-slate-400 text-sm mt-2">
+          Hiệu quả bảo quản bún tươi đến từ công nghệ nhiều rào cản (Hurdle Technology: pH thấp + chất bảo quản + nhiệt độ thấp 4–8°C + bao gói kín), không bao giờ đến từ việc tăng liều lượng một chất duy nhất!
+        </p>
+      </div>
+
+      <!-- Interactive Synergy Checker Box -->
+      <div class="p-6 rounded-2xl glass-panel border border-brand-gold/30 mb-10">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4 pb-4 border-b border-slate-800">
+          <div>
+            <h3 class="text-base font-bold text-white flex items-center gap-2">
+              <i data-lucide="zap" class="w-4 h-4 text-brand-gold"></i>
+              <span>Bộ Kiểm Tra Tương Tác Cặp Phụ Gia Tức Thì</span>
+            </h3>
+            <p class="text-xs text-slate-400">Chọn 2 thành phần để hệ thống phân tích tính hiệp đồng hay tương kỵ:</p>
+          </div>
+          <div class="flex items-center gap-3 w-full md:w-auto">
+            <select id="synergySelectA" class="bg-slate-900 border border-slate-700 text-xs rounded-xl p-2.5 text-white focus:ring-1 focus:ring-brand-gold outline-none">
+              <option value="sorbate">Kali Sorbat / Sorbic</option>
+              <option value="stpp">STPP (Phosphat)</option>
+              <option value="lactic">Acid Lactic</option>
+              <option value="citric">Acid Citric</option>
+              <option value="benzoate">Natri Benzoat</option>
+              <option value="modified_starch">Tinh bột biến tính</option>
+            </select>
+            <span class="text-brand-gold font-bold">+</span>
+            <select id="synergySelectB" class="bg-slate-900 border border-slate-700 text-xs rounded-xl p-2.5 text-white focus:ring-1 focus:ring-brand-gold outline-none">
+              <option value="lactic">Acid Lactic</option>
+              <option value="stpp">STPP (Phosphat)</option>
+              <option value="sorbate">Kali Sorbat</option>
+              <option value="cold_storage">Bảo quản lạnh 4-8°C</option>
+              <option value="hard_water">Nước cứng chứa Ca/Mg</option>
+              <option value="xanthan">Xanthan / Guar Gum</option>
+            </select>
+            <button onclick="checkSynergy()" class="px-4 py-2.5 rounded-xl bg-brand-gold hover:bg-brand-goldHover text-slate-950 font-bold text-xs transition">
+              Kiểm Tra
+            </button>
+          </div>
+        </div>
+
+        <!-- Dynamic Result Display -->
+        <div id="synergyResultBox" class="mt-4 p-4 rounded-xl bg-slate-900/90 border border-emerald-500/40 flex items-start gap-3">
+          <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
+          <div>
+            <div class="text-sm font-bold text-emerald-400" id="synergyTitle">Cặp Hiệp Đồng Vàng: Sorbat + Acid Lactic</div>
+            <div class="text-xs text-slate-300 mt-1" id="synergyDesc">
+              Acid Lactic bền nhiệt giúp hạ pH khối bột xuống &le; 5,5 mà không bị bay hơi khi luộc 100°C. Ở pH này, tỷ lệ Acid Sorbic ở dạng phân tử không phân ly tăng vọt (pKa 4,76), dễ dàng xuyên qua màng tế bào ức chế nấm men và mốc, tăng hiệu quả bảo quản lên gấp 3-4 lần mà không cần tăng liều sorbat!
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Standard Synergy and Incompatibility Matrix Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- Synergy Group (Green) -->
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-emerald-500/30">
+          <div class="flex items-center gap-2 text-emerald-400 font-bold text-base mb-4">
+            <i data-lucide="trending-up" class="w-5 h-5"></i>
+            <span>CÁC CẶP HIỆP ĐỒNG KHUYẾN NGHỊ KẾT HỢP</span>
+          </div>
+          
+          <div class="space-y-3.5 text-xs">
+            
+            <div class="p-3 rounded-xl bg-slate-950/70 border border-emerald-500/20">
+              <div class="flex items-center justify-between text-white font-bold mb-1">
+                <span>1. Sorbat + Acid Lactic (Trong khối bột)</span>
+                <span class="text-emerald-400 font-mono text-[10px] uppercase px-2 py-0.5 bg-emerald-500/10 rounded">Hiệp đồng sinh hóa</span>
+              </div>
+              <p class="text-slate-300 text-[11px] leading-relaxed">
+                Acid Lactic hạ pH bền vững, tối ưu hóa pKa 4,76 của acid sorbic. Tỷ lệ dạng hoạt tính sinh học kháng khuẩn đạt đỉnh điểm mà không gây chua gắt.
+              </p>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-950/70 border border-emerald-500/20">
+              <div class="flex items-center justify-between text-white font-bold mb-1">
+                <span>2. Sorbat trong bột + Sorbat bề mặt</span>
+                <span class="text-sky-400 font-mono text-[10px] uppercase px-2 py-0.5 bg-sky-500/10 rounded">Bổ trợ 2 lớp</span>
+              </div>
+              <p class="text-slate-300 text-[11px] leading-relaxed">
+                Lớp trong bột ngăn chặn sự phát triển từ vi sinh nội tại; lớp phun bề mặt tiêu diệt vi khuẩn nhiễm sau luộc từ môi trường đóng gói.
+              </p>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-950/70 border border-emerald-500/20">
+              <div class="flex items-center justify-between text-white font-bold mb-1">
+                <span>3. Phụ gia an toàn + Dây chuyền lạnh (4–8°C) + Túi kín</span>
+                <span class="text-brand-gold font-mono text-[10px] uppercase px-2 py-0.5 bg-amber-500/10 rounded">Rào cản vật lý</span>
+              </div>
+              <p class="text-slate-300 text-[11px] leading-relaxed">
+                Nhiệt độ thấp ức chế sự nhân đôi của vi khuẩn. Khi có bảo quản mát, liều lượng phụ gia cần thiết có thể giảm tới 40–50% so với để nhiệt độ thường.
+              </p>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-950/70 border border-emerald-500/20">
+              <div class="flex items-center justify-between text-white font-bold mb-1">
+                <span>4. Xanthan Gum + Guar Gum (Tỷ lệ 1:1)</span>
+                <span class="text-purple-400 font-mono text-[10px] uppercase px-2 py-0.5 bg-purple-500/10 rounded">Hiệp đồng cấu trúc</span>
+              </div>
+              <p class="text-slate-300 text-[11px] leading-relaxed">
+                Hai loại hydrocolloid này khi kết hợp với nhau tạo ra liên kết gel liên phân tử có độ nhớt và độ đàn hồi cao hơn nhiều so với việc dùng riêng rẽ từng loại.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Incompatibility Group (Red) -->
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-red-500/30">
+          <div class="flex items-center gap-2 text-red-400 font-bold text-base mb-4">
+            <i data-lucide="flame" class="w-5 h-5"></i>
+            <span>CÁC CẶP TƯƠNG KỴ & NGUY CƠ PHẢI TRÁNH</span>
+          </div>
+
+          <div class="space-y-3.5 text-xs">
+            
+            <div class="p-3 rounded-xl bg-slate-950/70 border border-red-500/20">
+              <div class="flex items-center justify-between text-white font-bold mb-1">
+                <span>1. STPP + Cho Acid Lactic cùng lúc</span>
+                <span class="text-red-400 font-mono text-[10px] uppercase px-2 py-0.5 bg-red-500/10 rounded">Tương kỵ hóa học</span>
+              </div>
+              <p class="text-slate-300 text-[11px] leading-relaxed">
+                STPP là muối có tính kiềm, nếu đổ cùng lúc với acid sẽ trung hòa lẫn nhau: STPP mất khả năng phân tán ion còn acid bị triệt tiêu, khiến pH tăng cao làm sorbat mất tác dụng.
+              </p>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-950/70 border border-red-500/20">
+              <div class="flex items-center justify-between text-white font-bold mb-1">
+                <span>2. STPP Phosphat + Nước ngâm rửa cứng (chứa nhiều Ca/Mg)</span>
+                <span class="text-red-400 font-mono text-[10px] uppercase px-2 py-0.5 bg-red-500/10 rounded">Kết tủa muối</span>
+              </div>
+              <p class="text-slate-300 text-[11px] leading-relaxed">
+                Phosphat tạo phản ứng với ion canxi trong nước giếng khoan chưa lọc, sinh kết tủa Canxi Phosphat màu trắng đục bám bề mặt bún và làm mất độ bóng.
+              </p>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-950/70 border border-red-500/20">
+              <div class="flex items-center justify-between text-white font-bold mb-1">
+                <span>3. Kali Sorbat đậm đặc + Acid mạnh trực tiếp</span>
+                <span class="text-red-400 font-mono text-[10px] uppercase px-2 py-0.5 bg-red-500/10 rounded">Tách tủa acid</span>
+              </div>
+              <p class="text-slate-300 text-[11px] leading-relaxed">
+                Đổ acid citric đậm đặc vào dung dịch kali sorbat chưa pha loãng sẽ lập tức làm kết tủa acid sorbic dạng tinh thể trắng không tan, gây nghẹt đầu béc phun sương!
+              </p>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-950/70 border border-red-500/20">
+              <div class="flex items-center justify-between text-white font-bold mb-1">
+                <span>4. Thừa Tinh bột biến tính + Thừa Gum</span>
+                <span class="text-amber-400 font-mono text-[10px] uppercase px-2 py-0.5 bg-amber-500/10 rounded">Đối kháng cảm quan</span>
+              </div>
+              <p class="text-slate-300 text-[11px] leading-relaxed">
+                Làm giảm độ dai của gel amylose tự nhiên, khiến sợi bún ngậm quá nhiều nước, sợi mềm nhũn, dễ bị đứt nát khi tiếp xúc nước dùng nóng 80-90°C.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Summation Rule Alert -->
+      <div class="mt-8 p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-xs text-amber-200 flex items-start gap-3">
+        <i data-lucide="calculator" class="w-5 h-5 text-brand-gold shrink-0 mt-0.5"></i>
+        <div>
+          <strong class="text-white block mb-0.5">Quy tắc tỷ lệ cộng dồn an toàn khi dùng nhiều chất bảo quản cùng nhóm:</strong>
+          <span>Theo nguyên tắc an toàn quốc tế, nếu cơ sở sử dụng phối hợp nhiều phụ gia bảo quản có cùng chức năng, tổng tỷ số giữa nồng độ sử dụng và mức tối đa cho phép phải không vượt quá 1: </span>
+          <code class="font-mono bg-black/40 px-2 py-0.5 rounded text-amber-300 font-bold ml-1">&Sigma; (C<sub>i</sub> / ML<sub>i</sub>) &le; 1</code>.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 5: Máy Tính Phối Trộn Mẻ Chuẩn (Chương 7) -->
+  <section id="may-tinh-phoi-tron" class="py-16 bg-[#090e18] border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-brand-gold border border-amber-500/20 mb-3">
+          <i data-lucide="calculator" class="w-3.5 h-3.5"></i> CÔNG CỤ TÍNH TOÁN THỰC HÀNH SẢN XUẤT
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+          Máy Tính Phối Trộn Phụ Gia Thông Minh (Mẻ Chuẩn Bột Gạo)
+        </h2>
+        <p class="text-slate-400 text-sm mt-2">
+          Tính toán tự động lượng phụ gia cần cân cho mẻ bột khô theo hệ số ra bún (Y), tỷ lệ lưu giữ sau luộc (R), hệ số quy đổi phân tử (f) và kiểm tra kịch bản xấu nhất (Worst-case R=1).
+        </p>
+      </div>
+
+      <!-- Main Calculator Card -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: Input Parameters (7 cols) -->
+        <div class="lg:col-span-7 glass-panel p-6 sm:p-8 rounded-2xl border border-slate-800">
+          <h3 class="text-base font-bold text-white mb-6 flex items-center justify-between">
+            <span class="flex items-center gap-2">
+              <i data-lucide="sliders" class="w-4 h-4 text-brand-gold"></i> Thông Số Mẻ Sản Xuất
+            </span>
+            <button onclick="resetCalculatorDefaults()" class="text-xs text-slate-400 hover:text-brand-gold underline">Khôi phục mặc định</button>
+          </h3>
+
+          <div class="space-y-5">
+            
+            <!-- Parameter 1: Khối lượng bột gạo B -->
+            <div>
+              <div class="flex items-center justify-between text-xs mb-1.5">
+                <label for="inputB" class="font-semibold text-slate-200">Khối lượng bột gạo khô (B):</label>
+                <span class="font-mono text-brand-gold font-bold text-sm"><span id="valB">100</span> kg</span>
+              </div>
+              <input type="range" id="inputB" min="20" max="500" step="10" value="100" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-amber-500" oninput="runCalculator()">
+              <div class="flex justify-between text-[10px] text-slate-500 mt-1">
+                <span>20 kg (mẻ nhỏ)</span>
+                <span>100 kg (mẻ chuẩn)</span>
+                <span>500 kg (công nghiệp)</span>
+              </div>
+            </div>
+
+            <!-- Parameter 2: Hệ số ra bún Y -->
+            <div>
+              <div class="flex items-center justify-between text-xs mb-1.5">
+                <label for="inputY" class="font-semibold text-slate-200">Hệ số ra bún (Y = kg bún / kg bột khô):</label>
+                <span class="font-mono text-sky-400 font-bold text-sm"><span id="valY">2.5</span> kg bún/kg</span>
+              </div>
+              <input type="range" id="inputY" min="2.0" max="3.0" step="0.05" value="2.5" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-sky-500" oninput="runCalculator()">
+              <div class="text-[11px] text-slate-400 mt-1">
+                &rarr; Khối lượng bún thành phẩm thu được: <strong class="text-white font-mono" id="totalBunOutput">250</strong> kg bún.
+              </div>
+            </div>
+
+            <!-- Parameter 3: Chọn loại phụ gia bảo quản -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="selectAdditive" class="block text-xs font-semibold text-slate-200 mb-1.5">Loại phụ gia bảo quản:</label>
+                <select id="selectAdditive" class="w-full bg-slate-900 border border-slate-700 text-xs rounded-xl p-2.5 text-white focus:ring-1 focus:ring-brand-gold outline-none" onchange="runCalculator()">
+                  <option value="sorbate_potassium" selected>Kali Sorbat (INS 202, f = 0,746)</option>
+                  <option value="sorbic_acid">Acid Sorbic (INS 200, f = 1,000)</option>
+                  <option value="stpp">STPP (INS 451i, f = 0,253 theo P)</option>
+                </select>
+              </div>
+              <div>
+                <label for="inputCmt" class="block text-xs font-semibold text-slate-200 mb-1.5">Nồng độ mục tiêu C<sub>mt</sub> (mg/kg bún):</label>
+                <input type="number" id="inputCmt" value="1000" min="200" max="2500" step="50" class="w-full bg-slate-900 border border-slate-700 text-xs rounded-xl p-2.5 text-white font-mono focus:ring-1 focus:ring-brand-gold outline-none" oninput="runCalculator()">
+                <div class="text-[10px] text-slate-400 mt-1">Khuyến nghị: 1.000 mg/kg (50% ML an toàn)</div>
+              </div>
+            </div>
+
+            <!-- Parameter 4: Tỷ lệ lưu giữ R sau luộc -->
+            <div>
+              <div class="flex items-center justify-between text-xs mb-1.5">
+                <label for="inputR" class="font-semibold text-slate-200">Tỷ lệ lưu giữ sau luộc & rửa (R):</label>
+                <span class="font-mono text-emerald-400 font-bold text-sm"><span id="valR">0.75</span> (Hao hụt 25%)</span>
+              </div>
+              <input type="range" id="inputR" min="0.5" max="1.0" step="0.05" value="0.75" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-emerald-500" oninput="runCalculator()">
+              <div class="flex justify-between text-[10px] text-slate-500 mt-1">
+                <span>0.5 (Mất 50%)</span>
+                <span>0.75 (Trung bình thực tế)</span>
+                <span>1.0 (Không thất thoát - Xấu nhất)</span>
+              </div>
+            </div>
+
+            <!-- Surface Spray Toggle & Parameters -->
+            <div class="pt-4 border-t border-slate-800">
+              <label class="flex items-center gap-2 cursor-pointer mb-3">
+                <input type="checkbox" id="checkSurfaceSpray" class="w-4 h-4 rounded text-brand-gold focus:ring-0 bg-slate-900 border-slate-700" onchange="toggleSurfaceSpray(); runCalculator()">
+                <span class="text-xs font-semibold text-white">Kết hợp phun sương / ngâm dung dịch bề mặt sau làm nguội</span>
+              </label>
+
+              <div id="sprayInputs" class="hidden grid-cols-2 gap-4 p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+                <div>
+                  <label for="inputCbm" class="block text-[11px] text-slate-300 mb-1">Mục tiêu bề mặt C<sub>bm</sub> (mg/kg):</label>
+                  <input type="number" id="inputCbm" value="500" min="100" max="1000" step="50" class="w-full bg-slate-950 border border-slate-800 text-xs rounded-lg p-2 text-white font-mono" oninput="runCalculator()">
+                </div>
+                <div>
+                  <label for="inputU" class="block text-[11px] text-slate-300 mb-1">Hệ số bám nước U (kg/kg):</label>
+                  <input type="number" id="inputU" value="0.03" min="0.01" max="0.08" step="0.005" class="w-full bg-slate-950 border border-slate-800 text-xs rounded-lg p-2 text-white font-mono" oninput="runCalculator()">
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Formula display with KaTeX -->
+          <div class="mt-6 p-3 rounded-xl bg-slate-950 border border-slate-800 text-[11px] text-slate-400">
+            <span class="text-brand-gold font-semibold block mb-1">Công thức toán học áp dụng (Mục 7.3):</span>
+            <div class="font-mono text-slate-200">
+              m (gam) = [ C<sub>mt</sub> &times; B &times; Y ] / [ 1000 &times; f &times; R ]
+            </div>
+            <div class="font-mono text-slate-400 mt-1">
+              Kiểm tra Worst-Case (R = 1): C<sub>max</sub> = [ m &times; f &times; 1000 ] / [ B &times; Y ] &le; ML
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Calculation Results & Safety Verification (5 cols) -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <!-- Result Card -->
+          <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-amber-500/40 relative overflow-hidden glow-gold">
+            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="flex items-center justify-between text-xs text-slate-400 mb-2">
+              <span>LƯỢNG PHỤ GIA CẦN CÂN MẺ NÀY</span>
+              <i data-lucide="scale" class="w-4 h-4 text-brand-gold"></i>
+            </div>
+            
+            <div class="flex items-baseline gap-2">
+              <span class="text-4xl sm:text-5xl font-extrabold text-brand-gold font-mono" id="resAddWeight">447</span>
+              <span class="text-xl font-bold text-white">gam</span>
+            </div>
+            
+            <div class="text-xs text-slate-300 mt-2">
+              Tương đương: <strong class="text-white font-mono" id="resAddPercent">0.45%</strong> khối lượng bột gạo khô.
+            </div>
+
+            <!-- Worst Case Safety Evaluation -->
+            <div class="mt-6 pt-5 border-t border-slate-800">
+              <div class="flex items-center justify-between text-xs mb-1">
+                <span class="text-slate-400 font-medium">Kiểm tra kịch bản xấu nhất (R=1 không mất):</span>
+                <span class="font-mono font-bold text-white" id="resWorstCase">1.333 mg/kg</span>
+              </div>
+
+              <!-- Visual Safety Meter Bar -->
+              <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden my-2 relative">
+                <div id="safetyMeterBar" class="bg-emerald-500 h-full rounded-full transition-all duration-300" style="width: 66.6%;"></div>
+              </div>
+
+              <div class="flex justify-between text-[10px] font-mono text-slate-500 mb-3">
+                <span>0</span>
+                <span>1.000</span>
+                <span class="text-amber-400 font-bold">2.000 ML</span>
+              </div>
+
+              <div id="safetyVerdict" class="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-xs text-emerald-300 flex items-start gap-2">
+                <i data-lucide="shield-check" class="w-4 h-4 shrink-0 mt-0.5"></i>
+                <div>
+                  <strong class="block text-emerald-400">ĐẠT AN TOÀN TUYỆT ĐỐI (&le; ML)</strong>
+                  <span>Ngay cả khi không có bất kỳ hao hụt nào qua nước luộc, dư lượng tối đa vẫn nằm sâu dưới ngưỡng quy chuẩn 2.000 mg/kg.</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Spray Solution Output (if checked) -->
+            <div id="sprayResultContainer" class="hidden mt-4 pt-4 border-t border-slate-800 text-xs">
+              <div class="text-sky-400 font-semibold mb-1">Thông số pha dung dịch phun:</div>
+              <div class="p-3 rounded-xl bg-slate-900/90 border border-slate-800 space-y-1">
+                <div class="flex justify-between">
+                  <span class="text-slate-400">Nồng độ dung dịch C<sub>dd</sub>:</span>
+                  <span class="font-mono font-bold text-white" id="resCdd">16.667 mg/L</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-400">Kali Sorbat cần hòa tan:</span>
+                  <span class="font-mono font-bold text-sky-400" id="resSprayPerLiter">22,3 g / Lít</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-400">Tổng dư lượng tích tụ dự kiến:</span>
+                  <span class="font-mono font-bold text-amber-300" id="resTotalCombined">1.833 mg/kg</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Print Batch Formulation Button -->
+          <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between">
+            <div>
+              <div class="text-xs font-bold text-white">Xuất Phiếu Pha Trộn Mẻ</div>
+              <div class="text-[11px] text-slate-400">In phiếu giao cho thợ đứng cối cân đo</div>
+            </div>
+            <button onclick="openPrintModal()" class="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-brand-gold border border-slate-700 text-xs font-bold flex items-center gap-1.5 transition">
+              <i data-lucide="printer" class="w-3.5 h-3.5"></i>
+              <span>Xem & In Phiếu</span>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Printable Formulation Modal -->
+  <div id="printModal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-lg w-full p-6 text-slate-200 shadow-2xl relative">
+      <button onclick="closePrintModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <!-- Print Area -->
+      <div id="printArea" class="space-y-4">
+        <div class="text-center border-b border-slate-700 pb-3">
+          <div class="text-xs font-bold uppercase tracking-widest text-brand-gold">XƯỞNG SẢN XUẤT BÚN TƯƠI TRUYỀN THỐNG</div>
+          <h4 class="text-lg font-bold text-white mt-1">PHIẾU PHA TRỘN PHỤ GIA MẺ CHUẨN</h4>
+          <div class="text-xs text-slate-400">Áp dụng theo TT 24/2019 & 09/VBHN-BYT (Nhóm 06.4.3)</div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2 text-xs bg-slate-950 p-3 rounded-lg border border-slate-800">
+          <div>Khối lượng bột gạo khô: <strong class="text-white" id="modalValB">100 kg</strong></div>
+          <div>Dự kiến ra bún: <strong class="text-white" id="modalValBun">250 kg</strong></div>
+          <div>Ngày lập mẻ: <strong class="text-white" id="modalDate">02/10/2026</strong></div>
+          <div>Ca sản xuất: <strong class="text-white">Ca sáng</strong></div>
+        </div>
+
+        <div class="overflow-hidden rounded-lg border border-slate-700">
+          <table class="w-full text-xs text-left">
+            <thead class="bg-slate-800 text-slate-300">
+              <tr>
+                <th class="p-2">Tên phụ gia</th>
+                <th class="p-2 text-right">Lượng cân (g)</th>
+                <th class="p-2">Thời điểm cho vào</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800 text-slate-300" id="modalTableBody">
+              <tr>
+                <td class="p-2 font-medium">Tinh bột biến tính 1422</td>
+                <td class="p-2 text-right font-mono font-bold text-white">10.000 g</td>
+                <td class="p-2 text-slate-400">Trộn khô cùng bột gạo</td>
+              </tr>
+              <tr>
+                <td class="p-2 font-medium">Xanthan Gum (415)</td>
+                <td class="p-2 text-right font-mono font-bold text-white">200 g</td>
+                <td class="p-2 text-slate-400">Trộn khô chống vón cục</td>
+              </tr>
+              <tr>
+                <td class="p-2 font-medium">STPP Phosphat (451i)</td>
+                <td class="p-2 text-right font-mono font-bold text-white">300 g</td>
+                <td class="p-2 text-slate-400">Hòa 50% nước nhào đầu</td>
+              </tr>
+              <tr>
+                <td class="p-2 font-medium text-brand-gold" id="modalAddName">Kali Sorbat (202)</td>
+                <td class="p-2 text-right font-mono font-bold text-brand-gold" id="modalAddWeight">447 g</td>
+                <td class="p-2 text-slate-400">Hòa nước nhào phần 2</td>
+              </tr>
+              <tr>
+                <td class="p-2 font-medium text-emerald-400">Acid Lactic (270)</td>
+                <td class="p-2 text-right font-mono font-bold text-emerald-400">Theo pH kế</td>
+                <td class="p-2 text-slate-400">Cuối cùng, đạt pH 5,0-5,5</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="text-[10px] text-slate-400 italic">
+          * Lưu ý kỹ thuật viên: Cân sai số &le; 1g. Đo pH khối bột trước khi đùn sợi. Mọi thay đổi phải ghi nhật ký sản xuất.
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="mt-6 flex justify-end gap-3 no-print">
+        <button onclick="closePrintModal()" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-300">Đóng</button>
+        <button onclick="window.print()" class="px-5 py-2 rounded-xl bg-brand-gold hover:bg-brand-goldHover text-slate-950 font-bold text-xs flex items-center gap-1.5 shadow-md">
+          <i data-lucide="printer" class="w-4 h-4"></i> In Phiếu Ngay
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PDF Viewer Modal -->
+  <div id="pdfViewerModal" class="hidden fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-2 sm:p-4">
+    <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-5xl w-full h-[90vh] flex flex-col overflow-hidden shadow-2xl">
+      <div class="p-4 border-b border-slate-800 flex items-center justify-between bg-slate-950">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-amber-500/20 text-brand-gold flex items-center justify-center">
+            <i data-lucide="file-text" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-white">Xem Trước Tài Liệu PDF: Hướng Dẫn Sử Dụng Phụ Gia Bún Tươi</h4>
+            <span class="text-xs text-slate-400">Tác giả: Nguyễn Đức Duy Anh &bull; 289 KB &bull; Phiên bản 1.0 (10/2026)</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="Huong_dan_phu_gia_bun_tuoi.pdf" download="Huong_dan_phu_gia_bun_tuoi.pdf" class="px-3.5 py-1.5 rounded-lg bg-brand-gold hover:bg-brand-goldHover text-slate-950 font-bold text-xs flex items-center gap-1.5 transition shadow">
+            <i data-lucide="download" class="w-3.5 h-3.5"></i> <span>Tải Về</span>
+          </a>
+          <button onclick="closePdfModal()" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+      <div class="flex-1 w-full bg-slate-950 p-1">
+        <iframe src="Huong_dan_phu_gia_bun_tuoi.pdf" class="w-full h-full rounded-b-xl border-0"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 6: Trị 7 Nỗi Đau Nghề Bún (Chương 4.3 & 5.3 & Thực Chiến) -->
+  <section id="khac-phuc-noi-dau" class="py-16 bg-[#070b14] border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-red-500/10 text-red-400 border border-red-500/20 mb-3">
+          <i data-lucide="stethoscope" class="w-3.5 h-3.5"></i> BÁC SĨ BÚN TƯƠI TRUYỀN THỐNG
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+          Hỏi & Đáp: Khắc Phục 7 Nỗi Đau Sự Cố Lớn Nhất Của Người Làm Bún
+        </h2>
+        <p class="text-slate-400 text-sm mt-2">
+          Giải quyết tận gốc các hiện tượng bún thiu chua, chảy nhớt, lấm tấm đốm trắng, bở nát hay khô cứng qua đêm bằng khoa học thực phẩm chính xác.
+        </p>
+      </div>
+
+      <!-- Accordion Grid -->
+      <div class="space-y-4 max-w-4xl mx-auto">
+        
+        <!-- Issue 1 -->
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/60 overflow-hidden transition-all duration-200">
+          <button class="w-full p-5 text-left flex items-center justify-between gap-4 focus:outline-none" onclick="togglePain(1)">
+            <div class="flex items-center gap-3.5">
+              <span class="w-8 h-8 rounded-xl bg-red-500/20 text-red-400 font-bold flex items-center justify-center shrink-0 text-sm">#1</span>
+              <div>
+                <h3 class="text-sm sm:text-base font-bold text-white">Tại sao bún vừa làm buổi sáng, đến trưa/chiều (12-24h) đã bị chảy nhớt và có mùi chua?</h3>
+                <span class="text-xs text-red-400 font-medium">Triệu chứng: Sợi bún nhờn dính tay, mùi chua bốc lên, nước rửa đục ngầu</span>
+              </div>
+            </div>
+            <i data-lucide="chevron-down" id="painIcon1" class="w-5 h-5 text-slate-400 transition-transform"></i>
+          </button>
+          
+          <div id="painContent1" class="hidden p-5 pt-0 border-t border-slate-800/80 text-xs text-slate-300 space-y-3 bg-slate-950/40">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+              <div class="p-3 rounded-xl bg-red-950/20 border border-red-500/30">
+                <strong class="text-red-400 block mb-1">Căn nguyên kỹ thuật:</strong>
+                <ul class="list-disc list-inside space-y-1 text-slate-300">
+                  <li>Sorbat bị thất thoát quá nhiều qua nước luộc/rửa (R thấp mà không bù liều).</li>
+                  <li><strong>pH khối bột quá cao (> 6.0):</strong> Do dùng nhiều STPP có tính kiềm mà không hạ pH bằng acid lactic, khiến Kali Sorbat gần như mất 80% hoạt lực kháng khuẩn.</li>
+                  <li>Dung dịch ngâm/rửa sau luộc bị nhiễm chéo vi sinh vật từ môi trường.</li>
+                </ul>
+              </div>
+              <div class="p-3 rounded-xl bg-emerald-950/20 border border-emerald-500/30">
+                <strong class="text-emerald-400 block mb-1">Quy trình khắc phục dứt điểm:</strong>
+                <ul class="list-disc list-inside space-y-1 text-slate-300">
+                  <li>Bắt buộc chỉnh <strong>pH khối bột về 5,0 – 5,5</strong> bằng Acid Lactic (INS 270) trước khi đùn sợi.</li>
+                  <li>Tính toán lại lượng Kali Sorbat theo công thức bù hao hụt R (Chương 7).</li>
+                  <li>Nếu để nhiệt độ thường, kết hợp phun màng Kali sorbat 2% + Acid citric bề mặt ngay sau khi làm nguội ráo.</li>
+                  <li>Khuyến khích hạ nhiệt nhanh và bảo quản ở 4–8°C.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Issue 2 -->
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/60 overflow-hidden transition-all duration-200">
+          <button class="w-full p-5 text-left flex items-center justify-between gap-4 focus:outline-none" onclick="togglePain(2)">
+            <div class="flex items-center gap-3.5">
+              <span class="w-8 h-8 rounded-xl bg-amber-500/20 text-amber-400 font-bold flex items-center justify-center shrink-0 text-sm">#2</span>
+              <div>
+                <h3 class="text-sm sm:text-base font-bold text-white">Sợi bún bị lấm tấm đốm trắng hoặc hạt cặn li ti, nhìn như bị mốc sớm?</h3>
+                <span class="text-xs text-amber-400 font-medium">Triệu chứng: Hạt trắng nhỏ xuất hiện rải rác trên thân sợi bún</span>
+              </div>
+            </div>
+            <i data-lucide="chevron-down" id="painIcon2" class="w-5 h-5 text-slate-400 transition-transform"></i>
+          </button>
+          
+          <div id="painContent2" class="hidden p-5 pt-0 border-t border-slate-800/80 text-xs text-slate-300 space-y-3 bg-slate-950/40">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+              <div class="p-3 rounded-xl bg-amber-950/20 border border-amber-500/30">
+                <strong class="text-amber-400 block mb-1">Căn nguyên kỹ thuật:</strong>
+                <p>Do sử dụng <strong>Acid Sorbic (INS 200)</strong> dạng hạt thô nhưng cố hòa tan vào nước. Vì độ tan của acid sorbic cực thấp (~0,16 g/100 mL), các hạt không tan sẽ vón lại trong khối bột và lộ ra thành đốm trắng sau khi luộc chín.</p>
+              </div>
+              <div class="p-3 rounded-xl bg-emerald-950/20 border border-emerald-500/30">
+                <strong class="text-emerald-400 block mb-1">Cách khắc phục:</strong>
+                <p><strong>Cách 1:</strong> Chuyển sang dùng <strong>Kali Sorbat (INS 202)</strong> tan hoàn toàn trong nước lạnh.<br>
+                <strong>Cách 2:</strong> Nếu dùng Acid Sorbic, phải dùng dạng bột siêu mịn, <em>trộn khô phân tán tỷ lệ 1:10 với bột gạo khô</em> trước khi cho nước vào nhào.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Issue 3 -->
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/60 overflow-hidden transition-all duration-200">
+          <button class="w-full p-5 text-left flex items-center justify-between gap-4 focus:outline-none" onclick="togglePain(3)">
+            <div class="flex items-center gap-3.5">
+              <span class="w-8 h-8 rounded-xl bg-sky-500/20 text-sky-400 font-bold flex items-center justify-center shrink-0 text-sm">#3</span>
+              <div>
+                <h3 class="text-sm sm:text-base font-bold text-white">Bún để qua đêm bị khô cứng, sợi giòn dễ gãy, ăn bị ráp miệng?</h3>
+                <span class="text-xs text-sky-400 font-medium">Triệu chứng: Sợi mất độ dẻo tự nhiên, bẻ gãy giòn, mất độ bóng mướt</span>
+              </div>
+            </div>
+            <i data-lucide="chevron-down" id="painIcon3" class="w-5 h-5 text-slate-400 transition-transform"></i>
+          </button>
+          
+          <div id="painContent3" class="hidden p-5 pt-0 border-t border-slate-800/80 text-xs text-slate-300 space-y-3 bg-slate-950/40">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+              <div class="p-3 rounded-xl bg-sky-950/20 border border-sky-500/30">
+                <strong class="text-sky-400 block mb-1">Căn nguyên kỹ thuật:</strong>
+                <p>Đây là hiện tượng <strong>thoái hóa tinh bột (retrogradation)</strong> của phân tử Amylose trong gạo cũ khi nguội đi. Các chuỗi amylose tái sắp xếp song song và đẩy nước ra ngoài, làm sợi cứng đơ.</p>
+              </div>
+              <div class="p-3 rounded-xl bg-emerald-950/20 border border-emerald-500/30">
+                <strong class="text-emerald-400 block mb-1">Cách khắc phục:</strong>
+                <p>Bổ sung <strong>Tinh bột biến tính (INS 1422 hoặc 1414)</strong> tỷ lệ 5–10% để thay thế một phần bột gạo. Các nhóm liên kết ngang cản trở amylose kết tinh lại. Có thể phối hợp 0,1% Xanthan gum để giữ ẩm bề mặt sợi bún.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Issue 4 -->
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/60 overflow-hidden transition-all duration-200">
+          <button class="w-full p-5 text-left flex items-center justify-between gap-4 focus:outline-none" onclick="togglePain(4)">
+            <div class="flex items-center gap-3.5">
+              <span class="w-8 h-8 rounded-xl bg-purple-500/20 text-purple-400 font-bold flex items-center justify-center shrink-0 text-sm">#4</span>
+              <div>
+                <h3 class="text-sm sm:text-base font-bold text-white">Sợi bún bị bở nát, nhũn mềm khi chan nước lèo nóng, khách chê tơi tả?</h3>
+                <span class="text-xs text-purple-400 font-medium">Triệu chứng: Đưa vào nước lèo sôi sợi bún rã nát, không gắp được</span>
+              </div>
+            </div>
+            <i data-lucide="chevron-down" id="painIcon4" class="w-5 h-5 text-slate-400 transition-transform"></i>
+          </button>
+          
+          <div id="painContent4" class="hidden p-5 pt-0 border-t border-slate-800/80 text-xs text-slate-300 space-y-3 bg-slate-950/40">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+              <div class="p-3 rounded-xl bg-purple-950/20 border border-purple-500/30">
+                <strong class="text-purple-400 block mb-1">Căn nguyên kỹ thuật:</strong>
+                <p>Lạm dụng quá liều tinh bột biến tính (>15%) hoặc cho quá nhiều gum giữ nước. Khi gặp nước dùng nóng 80–90°C, các chất này hút no nước làm phá vỡ mạng gel tinh bột tự nhiên của bún.</p>
+              </div>
+              <div class="p-3 rounded-xl bg-emerald-950/20 border border-emerald-500/30">
+                <strong class="text-emerald-400 block mb-1">Cách khắc phục:</strong>
+                <p>Giảm tỷ lệ tinh bột biến tính từng bước 20% cho đến khi đạt độ dai tối ưu. Đảm bảo gạo làm bún có hàm lượng Amylose thích hợp (&ge; 22–26% như gạo Khang Dân, gạo Hàm Châu) để bún có xương sợi vững chắc.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Issue 5 -->
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/60 overflow-hidden transition-all duration-200">
+          <button class="w-full p-5 text-left flex items-center justify-between gap-4 focus:outline-none" onclick="togglePain(5)">
+            <div class="flex items-center gap-3.5">
+              <span class="w-8 h-8 rounded-xl bg-amber-500/20 text-amber-400 font-bold flex items-center justify-center shrink-0 text-sm">#5</span>
+              <div>
+                <h3 class="text-sm sm:text-base font-bold text-white">Bún ăn có vị hơi chát ở cuống họng, bề mặt sợi trơn tuột bất thường?</h3>
+                <span class="text-xs text-amber-400 font-medium">Triệu chứng: Hậu vị chát nhẹ, cảm giác xà phòng trơn nhớt trên lưỡi</span>
+              </div>
+            </div>
+            <i data-lucide="chevron-down" id="painIcon5" class="w-5 h-5 text-slate-400 transition-transform"></i>
+          </button>
+          
+          <div id="painContent5" class="hidden p-5 pt-0 border-t border-slate-800/80 text-xs text-slate-300 space-y-3 bg-slate-950/40">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+              <div class="p-3 rounded-xl bg-amber-950/20 border border-amber-500/30">
+                <strong class="text-amber-400 block mb-1">Căn nguyên kỹ thuật:</strong>
+                <p>Dư thừa phosphat vô cơ (STPP 451i). Khi vượt quá 0,3% khối lượng bột khô, các ion polyphosphat tự do tạo phức chát kim loại với protein nước bọt trong khoang miệng.</p>
+              </div>
+              <div class="p-3 rounded-xl bg-emerald-950/20 border border-emerald-500/30">
+                <strong class="text-emerald-400 block mb-1">Cách khắc phục:</strong>
+                <p>Khống chế liều STPP ở mức <strong>0,15 – 0,25% khối lượng bột khô</strong> (tối đa 250g cho 100kg bột). Luôn hòa tan hoàn toàn vào nước ấm trước khi đổ vào cối nhào.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Issue 6 -->
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/60 overflow-hidden transition-all duration-200">
+          <button class="w-full p-5 text-left flex items-center justify-between gap-4 focus:outline-none" onclick="togglePain(6)">
+            <div class="flex items-center gap-3.5">
+              <span class="w-8 h-8 rounded-xl bg-red-500/20 text-red-400 font-bold flex items-center justify-center shrink-0 text-sm">#6</span>
+              <div>
+                <h3 class="text-sm sm:text-base font-bold text-white">Tại sao cùng một công thức cân mà mẻ đầu ca kiểm nghiệm đạt, mẻ cuối ca lại vượt ML?</h3>
+                <span class="text-xs text-red-400 font-medium">Triệu chứng: Dư lượng phụ gia dao động thất thường, cơ quan chức năng kiểm tra bị phạt</span>
+              </div>
+            </div>
+            <i data-lucide="chevron-down" id="painIcon6" class="w-5 h-5 text-slate-400 transition-transform"></i>
+          </button>
+          
+          <div id="painContent6" class="hidden p-5 pt-0 border-t border-slate-800/80 text-xs text-slate-300 space-y-3 bg-slate-950/40">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+              <div class="p-3 rounded-xl bg-red-950/20 border border-red-500/30">
+                <strong class="text-red-400 block mb-1">Căn nguyên kỹ thuật:</strong>
+                <p>Hiện tượng <strong>tích tụ nồng độ trong nồi nước luộc</strong>! Các mẻ bún trước nhả sorbat và phosphat vào nước luộc. Đến cuối ca, nước luộc đã bão hòa phụ gia nên các mẻ bún sau không bị rửa trôi nữa, thậm chí còn ngấm ngược thêm phụ gia từ nước bão hòa!</p>
+              </div>
+              <div class="p-3 rounded-xl bg-emerald-950/20 border border-emerald-500/30">
+                <strong class="text-emerald-400 block mb-1">Cách khắc phục:</strong>
+                <p>Thiết lập <strong>quy chuẩn xả tràn và cấp nước mới liên tục</strong> cho nồi luộc (tối thiểu thay 20-30% thể tích nước luộc sau mỗi 3-5 mẻ). Lấy mẫu kiểm nghiệm ngẫu nhiên ở cả đầu ca, giữa ca và cuối ca.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Issue 7 -->
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/60 overflow-hidden transition-all duration-200">
+          <button class="w-full p-5 text-left flex items-center justify-between gap-4 focus:outline-none" onclick="togglePain(7)">
+            <div class="flex items-center gap-3.5">
+              <span class="w-8 h-8 rounded-xl bg-sky-500/20 text-sky-400 font-bold flex items-center justify-center shrink-0 text-sm">#7</span>
+              <div>
+                <h3 class="text-sm sm:text-base font-bold text-white">Vòi phun sương bề mặt liên tục bị tắc, bún phun xong xuất hiện vệt cặn trắng đục?</h3>
+                <span class="text-xs text-sky-400 font-medium">Triệu chứng: Đầu béc phun nghẹt cặn, bún có vệt trắng không đều</span>
+              </div>
+            </div>
+            <i data-lucide="chevron-down" id="painIcon7" class="w-5 h-5 text-slate-400 transition-transform"></i>
+          </button>
+          
+          <div id="painContent7" class="hidden p-5 pt-0 border-t border-slate-800/80 text-xs text-slate-300 space-y-3 bg-slate-950/40">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+              <div class="p-3 rounded-xl bg-sky-950/20 border border-sky-500/30">
+                <strong class="text-sky-400 block mb-1">Căn nguyên kỹ thuật:</strong>
+                <p>Thợ pha nước phun bằng cách đổ Acid Citric đậm đặc thẳng vào dung dịch Kali Sorbat nồng độ cao. pH tụt đột ngột khiến ion Sorbat kết hợp với H+ tạo thành <strong>Acid Sorbic kết tủa dạng tinh thể</strong> làm tắc vòi béc và đóng vệt cặn trên bún.</p>
+              </div>
+              <div class="p-3 rounded-xl bg-emerald-950/20 border border-emerald-500/30">
+                <strong class="text-emerald-400 block mb-1">Cách khắc phục:</strong>
+                <p>Hòa tan Kali Sorbat vào toàn bộ lượng nước trước. Hòa tan riêng Acid Citric vào một ca nước nhỏ rồi rót từ từ từng chút một vào bồn, khuấy đều liên tục và kiểm soát pH dung dịch &ge; 5,0. Luôn lắp màng lọc lưới 200 mesh trước đầu bơm phun.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 7: Kiểm Soát Chất Lượng & Hồ Sơ Pháp Lý (Chương 8) -->
+  <section id="kiem-soat-chat-luong" class="py-16 bg-[#090e18] border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mb-10">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-3">
+          <i data-lucide="clipboard-check" class="w-3.5 h-3.5"></i> CHƯƠNG 8: QUẢN LÝ CHẤT LƯỢNG QA/QC
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+          Quy Chuẩn Kiểm Nghiệm & Bộ Hồ Sơ Tự Công Bố Sản Phẩm
+        </h2>
+        <p class="text-slate-400 text-sm mt-1">
+          Mọi công thức cải tiến kỹ thuật chỉ được áp dụng thương mại sau khi có kết quả thử nghiệm độc lập từ phòng lab đạt chuẩn ISO/IEC 17025.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        
+        <!-- Checklist Testing Items -->
+        <div class="lg:col-span-2 glass-panel p-6 rounded-2xl border border-slate-800">
+          <h3 class="text-base font-bold text-white mb-4 flex items-center gap-2">
+            <i data-lucide="test-tube-2" class="w-4 h-4 text-emerald-400"></i>
+            <span>6 Chỉ Tiêu Kiểm Nghiệm Trọng Yếu Cần Thực Hiện</span>
+          </h3>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-xs text-left text-slate-300">
+              <thead class="bg-slate-900 text-slate-400 uppercase text-[11px]">
+                <tr>
+                  <th class="p-3">Chỉ tiêu kiểm nghiệm</th>
+                  <th class="p-3">Phương pháp thử</th>
+                  <th class="p-3">Tần suất khuyến nghị</th>
+                  <th class="p-3">Mục tiêu kiểm soát</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-800/80 font-normal">
+                <tr>
+                  <td class="p-3 font-semibold text-white">Sorbat (quy acid sorbic)</td>
+                  <td class="p-3 font-mono text-emerald-400">HPLC</td>
+                  <td class="p-3">Khi đổi công thức; định kỳ 6 tháng</td>
+                  <td class="p-3">Xác định tỷ lệ lưu giữ R, cam kết &le; 2.000 mg/kg</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-white">Phospho tổng</td>
+                  <td class="p-3 font-mono text-sky-400">Quang phổ / ICP</td>
+                  <td class="p-3">Khi đổi công thức phụ gia</td>
+                  <td class="p-3">Trừ P nền bột gạo, cam kết &le; 2.500 mg P/kg</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-white">Đo pH bột & bún</td>
+                  <td class="p-3 font-mono text-amber-400">Máy đo pH cầm tay</td>
+                  <td class="p-3 font-bold text-white">Mỗi mẻ sản xuất</td>
+                  <td class="p-3">Đảm bảo pH 5,0 – 5,5 để sorbat phát huy tác dụng</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-white">Hệ số ra bún Y & Bám U</td>
+                  <td class="p-3 font-mono text-slate-300">Cân điện tử</td>
+                  <td class="p-3 font-bold text-white">Mỗi ca sản xuất (3 mẻ)</td>
+                  <td class="p-3">Cập nhật vào máy tính phối trộn mẻ chuẩn</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-white">Vi sinh vật (Tổng khuẩn, Nấm, E.coli)</td>
+                  <td class="p-3 font-mono text-slate-300">Đĩa thạch vi sinh</td>
+                  <td class="p-3">Định kỳ theo hồ sơ tự công bố</td>
+                  <td class="p-3">Đánh giá thời gian bảo quản an toàn thực tế</td>
+                </tr>
+                <tr class="bg-red-950/20">
+                  <td class="p-3 font-semibold text-red-300">Hàn the, Formol, Huỳnh quang</td>
+                  <td class="p-3 font-mono text-red-400">Test nhanh / Lab ISO</td>
+                  <td class="p-3">Mỗi lô bột nguyên liệu nhập về</td>
+                  <td class="p-3 text-red-300 font-bold">Cam kết 100% ÂM TÍNH (Không có)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Documentation Audit Checklist Box -->
+        <div class="glass-panel p-6 rounded-2xl border border-slate-800 flex flex-col justify-between">
+          <div>
+            <h3 class="text-base font-bold text-white mb-3 flex items-center gap-2">
+              <i data-lucide="folder-archive" class="w-4 h-4 text-brand-gold"></i>
+              <span>Bộ Hồ Sơ Lưu Trữ Khi Đoàn Kiểm Tra Đến</span>
+            </h3>
+            <p class="text-xs text-slate-400 mb-4">
+              Cơ sở cần lưu giữ sẵn tại xưởng các chứng từ sau để xuất trình ngay khi đoàn liên ngành ATTP kiểm tra:
+            </p>
+
+            <ul class="space-y-2.5 text-xs text-slate-300">
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-square" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                <span><strong>Bản tự công bố sản phẩm:</strong> Phải ghi đúng mã nhóm 06.4.3 và khớp chính xác tên các phụ gia đang dùng.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-square" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                <span><strong>Phiếu kết quả kiểm nghiệm:</strong> Phiếu test trong vòng 12 tháng tại lab có chứng chỉ ISO 17025.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-square" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                <span><strong>Hồ sơ nguồn gốc phụ gia:</strong> Hóa đơn GTGT, Phiếu phân tích COA, nhãn phụ gia ghi rõ "Dùng cho thực phẩm".</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-square" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                <span><strong>Nhật ký sản xuất:</strong> Sổ ghi chép lượng phụ gia cân mỗi mẻ và chỉ số đo pH bột hàng ngày.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-800 text-[11px] text-slate-400">
+            Mẹo QA: Không để bao bì phụ gia không nhãn mác trong khu vực chế biến bún.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 8: Tài Liệu Tham Khảo & Tải File Gốc -->
+  <section class="py-16 bg-[#070b14] border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mb-8">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-brand-gold/10 text-brand-gold border border-brand-gold/20 mb-3">
+          <i data-lucide="library" class="w-3.5 h-3.5"></i> NGUỒN DẪN CHỨNG CHÍNH THỐNG
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+          Danh Mục Tài Liệu Tham Khảo Pháp Lý & Khoa Học
+        </h2>
+        <p class="text-slate-400 text-sm mt-1">
+          Tất cả dữ liệu được biên soạn dựa trên các văn bản quy phạm pháp luật và tiêu chuẩn khoa học thực phẩm có hiệu lực pháp lý cao nhất.
+        </p>
+      </div>
+
+      <!-- References List Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+        
+        <a href="https://datafiles.chinhphu.vn/cpp/files/vbpq/2024/9/09-vbhn-byt.pdf" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl glass-panel border border-slate-800 hover:border-brand-gold/40 transition group flex items-start gap-3">
+          <div class="p-2 rounded-lg bg-amber-500/10 text-brand-gold shrink-0 group-hover:scale-105 transition">
+            <i data-lucide="external-link" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <div class="font-bold text-white group-hover:text-brand-gold transition">Bộ Y tế (2024) - Văn bản hợp nhất 09/VBHN-BYT</div>
+            <div class="text-slate-400 mt-1">Hợp nhất các thông tư quản lý và sử dụng phụ gia thực phẩm (06/09/2024). Căn cứ tra cứu Phụ lục 1, 2A, 3.</div>
+          </div>
+        </a>
+
+        <a href="https://thuvienphapluat.vn/van-ban/the-thao-y-te/thong-tu-24-2019-tt-byt-quy-dinh-ve-quan-ly-va-su-dung-phu-gia-thuc-pham-360857.aspx" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl glass-panel border border-slate-800 hover:border-brand-gold/40 transition group flex items-start gap-3">
+          <div class="p-2 rounded-lg bg-amber-500/10 text-brand-gold shrink-0 group-hover:scale-105 transition">
+            <i data-lucide="external-link" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <div class="font-bold text-white group-hover:text-brand-gold transition">Bộ Y tế (2019) - Thông tư 24/2019/TT-BYT</div>
+            <div class="text-slate-400 mt-1">Quy định về quản lý và sử dụng phụ gia thực phẩm, nguyên tắc ML và danh mục GMP.</div>
+          </div>
+        </a>
+
+        <a href="https://www.fao.org/fao-who-codexalimentarius/sh-proxy/en/?lnk=1&url=https%3A%2F%2Fworkspace.fao.org%2Fsites%2Fcodex%2FStandards%2FCXS+192-1995%2FCXS_192e.pdf" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl glass-panel border border-slate-800 hover:border-brand-gold/40 transition group flex items-start gap-3">
+          <div class="p-2 rounded-lg bg-blue-500/10 text-sky-400 shrink-0 group-hover:scale-105 transition">
+            <i data-lucide="external-link" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <div class="font-bold text-white group-hover:text-brand-gold transition">Codex Alimentarius - General Standard CXS 192-1995</div>
+            <div class="text-slate-400 mt-1">Tiêu chuẩn quốc tế Codex về phụ gia thực phẩm &mdash; Phân nhóm 06.4 bún gạo (rice vermicelli).</div>
+          </div>
+        </a>
+
+        <a href="https://tapchiyhoctphcm.vn/articles/17547" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl glass-panel border border-slate-800 hover:border-brand-gold/40 transition group flex items-start gap-3">
+          <div class="p-2 rounded-lg bg-emerald-500/10 text-emerald-400 shrink-0 group-hover:scale-105 transition">
+            <i data-lucide="external-link" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <div class="font-bold text-white group-hover:text-brand-gold transition">Tạp chí Y học TP. Hồ Chí Minh (2019, Tập 23, Số 5)</div>
+            <div class="text-slate-400 mt-1">Nghiên cứu sử dụng chất bảo quản trong bún tại Tây Ninh và khảo sát dư lượng thực tế.</div>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Download Box for Local PDF & Docx -->
+      <div class="mt-8 p-6 rounded-2xl bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border border-amber-500/30 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-slate-950 shrink-0 shadow-lg shadow-amber-500/20">
+            <i data-lucide="file-text" class="w-7 h-7"></i>
+          </div>
+          <div>
+            <div class="text-base font-bold text-white">Tải Toàn Văn Tài Liệu Hướng Dẫn Kỹ Thuật Gốc</div>
+            <p class="text-xs text-slate-300 mt-0.5">Bản in chuẩn trang trọng kèm công thức tính chi tiết, dấu kiểm chứng và bảng tra cứu pháp lý.</p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3 w-full sm:w-auto">
+          <button onclick="openPdfModal()" class="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-sky-300 border border-slate-700 font-semibold text-xs transition">
+            <i data-lucide="eye" class="w-4 h-4 text-sky-400"></i>
+            <span>Đọc Online</span>
+          </button>
+          <a href="Huong_dan_phu_gia_bun_tuoi.pdf" download="Huong_dan_phu_gia_bun_tuoi.pdf" class="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-brand-gold hover:bg-brand-goldHover text-slate-950 font-bold text-xs transition shadow-md shadow-amber-500/20">
+            <i data-lucide="download" class="w-4 h-4"></i>
+            <span>Tải Bản PDF (290 KB)</span>
+          </a>
+          <a href="Huong_dan_phu_gia_bun_tuoi.docx" download="Huong_dan_phu_gia_bun_tuoi.docx" class="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold text-xs transition">
+            <i data-lucide="file-type-2" class="w-4 h-4 text-sky-400"></i>
+            <span>Tải Bản DOCX (45 KB)</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 9: Khung Liên Hệ Tư Vấn & Trao Đổi Dự Án (Trực tiếp phía trên Footer) -->
+  <section id="lien-he-tu-van" class="py-16 bg-[#080d19] border-b border-slate-800 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Left info -->
+        <div class="lg:col-span-6 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            <span>KẾT NỐI KỸ SƯ CÔNG NGHỆ THỰC PHẨM & PHẦN MỀM</span>
+          </div>
+
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-snug">
+            Khung Liên Hệ Tư Vấn Kỹ Thuật & Trao Đổi Dự Án Trực Tiếp
+          </h2>
+
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Bạn đang vận hành xưởng bún muốn chuyển giao quy trình phụ gia chuẩn hóa an toàn, thiết lập hệ thống tự công bố không rủi ro pháp lý, hoặc cần phát triển giải pháp phần mềm quản lý công thức, tính toán mẻ tự động cho doanh nghiệp?
+          </p>
+
+          <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 space-y-3 text-xs">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-brand-gold flex items-center justify-center">
+                <i data-lucide="user" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="text-slate-400 block text-[11px]">Kỹ sư công nghệ & Tác giả:</span>
+                <strong class="text-white text-sm">Nguyễn Đức Duy Anh</strong>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="text-slate-400 block text-[11px]">Điện thoại / Zalo trực tiếp:</span>
+                <a href="tel:+84908095693" class="text-emerald-400 font-mono text-sm font-bold hover:underline">+84 908 095 693</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-blue-500/10 text-sky-400 flex items-center justify-center">
+                <i data-lucide="globe" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="text-slate-400 block text-[11px]">Hệ sinh thái số:</span>
+                <span class="text-white font-mono">ungdung.vercel.app &bull; DUY ANH LAB</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Contact Form -->
+        <div class="lg:col-span-6 glass-panel p-6 sm:p-8 rounded-2xl border border-slate-800 shadow-2xl">
+          <h3 class="text-base font-bold text-white mb-2 flex items-center gap-2">
+            <i data-lucide="message-square" class="w-4 h-4 text-brand-gold"></i>
+            <span>Gửi Yêu Cầu Tư Vấn / Đặt Lịch Chuyển Giao</span>
+          </h3>
+          <p class="text-xs text-slate-400 mb-6">Điền thông tin bên dưới, kỹ sư sẽ liên hệ lại trong vòng 2 giờ làm việc.</p>
+
+          <form id="contactConsultForm" onsubmit="handleContactSubmit(event)" class="space-y-4 text-xs">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="clientName" class="block font-medium text-slate-300 mb-1">Họ tên của bạn *</label>
+                <input type="text" id="clientName" required placeholder="Nguyễn Văn A" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-white focus:ring-1 focus:ring-brand-gold outline-none">
+              </div>
+              <div>
+                <label for="clientPhone" class="block font-medium text-slate-300 mb-1">Số điện thoại / Zalo *</label>
+                <input type="tel" id="clientPhone" required placeholder="0908 xxx xxx" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-white focus:ring-1 focus:ring-brand-gold outline-none">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="clientCapacity" class="block font-medium text-slate-300 mb-1">Quy mô sản xuất bún</label>
+                <select id="clientCapacity" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-white focus:ring-1 focus:ring-brand-gold outline-none">
+                  <option value="duoi_500kg">Dưới 500 kg bún / ngày</option>
+                  <option value="500kg_2tan">500 kg – 2 tấn bún / ngày</option>
+                  <option value="tren_2tan">Trên 2 tấn bún / ngày (Công nghiệp)</option>
+                  <option value="software">Cần phát triển ứng dụng Web / AI riêng</option>
+                </select>
+              </div>
+              <div>
+                <label for="clientNeed" class="block font-medium text-slate-300 mb-1">Vấn đề cần hỗ trợ chính</label>
+                <select id="clientNeed" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-white focus:ring-1 focus:ring-brand-gold outline-none">
+                  <option value="bao_quan">Khắc phục bún thiu chua, chảy nhớt</option>
+                  <option value="cau_truc">Khắc phục bún giòn cứng, bở đứt sợi</option>
+                  <option value="phap_ly">Tư vấn tự công bố & đối chiếu ML 2026</option>
+                  <option value="app">Xây dựng ứng dụng quản lý xưởng bún</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="clientNote" class="block font-medium text-slate-300 mb-1">Mô tả tình trạng hiện tại hoặc ý tưởng dự án</label>
+              <textarea id="clientNote" rows="3" placeholder="Ví dụ: Bún của tôi vào mùa hè hay bị nhớt sau 16 tiếng, cần tư vấn quy trình phối trộn chuẩn và công thức phun sương..." class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-white focus:ring-1 focus:ring-brand-gold outline-none resize-none"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition shadow-lg shadow-amber-500/20 flex items-center justify-center gap-2">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span>Gửi Yêu Cầu Tư Vấn Ngay</span>
+            </button>
+          </form>
+
+          <div id="contactSuccessMsg" class="hidden mt-4 p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-xs text-emerald-300 text-center">
+            <i data-lucide="check-circle" class="w-4 h-4 inline mr-1 text-emerald-400"></i>
+            Cảm ơn bạn! Thông tin đã được gửi đến Kỹ sư Duy Anh. Chúng tôi sẽ liên hệ lại ngay!
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- FOOTER TRANG WEB (CHÍNH XÁC 100% THEO HÌNH ẢNH) -->
+  <!-- ========================================== -->
+  <footer class="bg-[#0b1120] text-slate-400 text-sm border-t border-slate-800/80 pt-16 pb-12 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Top 3 Columns -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 pb-14 border-b border-slate-800/80">
+        
+        <!-- Left Column: Duy Anh Lab Badge & Description (5 cols) -->
+        <div class="md:col-span-5 space-y-5">
+          
+          <!-- Badge Box as in image -->
+          <div class="inline-block rounded-2xl overflow-hidden shadow-lg border border-slate-700/80 bg-slate-900">
+            <img src="duyanh_lab_badge.png" alt="DUYANH LAB Real-World Software Engineering" class="h-[62px] w-auto object-contain block">
+          </div>
+
+          <!-- Paragraph Text as in image -->
+          <p class="text-xs sm:text-[13px] text-slate-300 leading-relaxed max-w-md font-normal">
+            Chuyên thiết kế & phát triển các ứng dụng Web chuyên sâu, giải pháp AI và phần mềm thực chiến phục vụ mọi ý tưởng: từ kinh doanh B2B, nghiên cứu R&D, quản lý hộ kinh doanh đến giáo dục học tập và đời sống.
+          </p>
+
+          <!-- Slogan in Yellow as in image -->
+          <div class="text-xs font-bold text-[#FBBF24] tracking-wide">
+            &ldquo;MONG MUỐN &rarr; Ý TƯỞNG &rarr; HIỆN THỰC&rdquo;
+          </div>
+
+        </div>
+
+        <!-- Middle Column: Danh Mục Giải Pháp (3 cols) -->
+        <div class="md:col-span-3 space-y-4">
+          <h4 class="text-sm sm:text-base font-bold text-[#FBBF24]">
+            Danh Mục Giải Pháp
+          </h4>
+          <ul class="space-y-2.5 text-xs sm:text-[13px] text-slate-300">
+            <li>
+              <a href="#danh-muc-phu-gia" class="hover:text-white transition-colors">Ứng dụng tiêu biểu</a>
+            </li>
+            <li>
+              <a href="#may-tinh-phoi-tron" class="hover:text-white transition-colors">Hệ sinh thái Web & AI</a>
+            </li>
+            <li>
+              <a href="#can-cu-phap-ly" class="hover:text-white transition-colors">Các nhóm ngành trọng điểm</a>
+            </li>
+            <li>
+              <a href="#hai-phuong-phap" class="hover:text-white transition-colors">Kiến trúc công nghệ</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Column: Tư Vấn & Hiện Thực Hóa (4 cols) -->
+        <div class="md:col-span-4 space-y-4">
+          <h4 class="text-sm sm:text-base font-bold text-[#FBBF24]">
+            Tư Vấn & Hiện Thực Hóa
+          </h4>
+          <p class="text-xs sm:text-[13px] text-slate-300 leading-relaxed font-normal">
+            Bạn có ý tưởng trong cuộc sống, kinh doanh, học tập hay công việc cần hiện thực hóa thành ứng dụng Web riêng biệt? Đội ngũ kỹ thuật luôn sẵn sàng đồng hành, tư vấn kiến trúc giải pháp và phát triển sản phẩm thực tế theo yêu cầu riêng của bạn.
+          </p>
+          <div class="flex items-start gap-2.5 pt-1 text-xs text-slate-300">
+            <span class="w-2 h-2 rounded-full bg-[#10B981] mt-1.5 shrink-0 animate-pulse"></span>
+            <a href="#lien-he-tu-van" class="hover:text-white transition-colors">
+              Liên hệ tư vấn & trao đổi dự án qua khung liên hệ trực tiếp phía trên
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar as in image -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <div>
+          &copy; 2026 DUY ANH DIGITAL LAB &bull; <a href="https://ungdung.vercel.app" target="_blank" class="text-slate-300 hover:text-[#FBBF24] font-medium transition-colors">ungdung.vercel.app</a>
+        </div>
+        
+        <!-- Back to Top Button as in image -->
+        <button onclick="scrollToTop()" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700/80 text-xs font-medium transition shadow-sm hover:border-slate-600">
+          <span>Về đầu trang</span>
+          <i data-lucide="arrow-up" class="w-3.5 h-3.5 text-slate-400"></i>
+        </button>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Scroll to Top Smooth
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Additive Table Filter
+    function filterAdditives(category) {
+      const rows = document.querySelectorAll('.additive-row');
+      const buttons = document.querySelectorAll('.filter-btn');
+      
+      buttons.forEach(btn => {
+        btn.classList.remove('active', 'bg-brand-gold', 'text-slate-950');
+        btn.classList.add('text-slate-300');
+      });
+      event.target.classList.add('active', 'bg-brand-gold', 'text-slate-950');
+      event.target.classList.remove('text-slate-300');
+
+      rows.forEach(row => {
+        if (category === 'all') {
+          row.style.display = '';
+        } else {
+          const rowCat = row.getAttribute('data-category') || '';
+          if (rowCat.includes(category)) {
+            row.style.display = '';
+          } else {
+            row.style.display = 'none';
+          }
+        }
+      });
+    }
+
+    // Toggle Pain Point Accordions
+    function togglePain(id) {
+      const content = document.getElementById(`painContent${id}`);
+      const icon = document.getElementById(`painIcon${id}`);
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      } else {
+        content.classList.add('hidden');
+        icon.classList.remove('rotate-180');
+      }
+    }
+
+    // Synergy Matrix Checker
+    const synergyData = {
+      'sorbate+lactic': {
+        type: 'synergy',
+        title: 'Cặp Hiệp Đồng Vàng: Sorbat + Acid Lactic',
+        desc: 'Acid Lactic bền nhiệt giúp hạ pH khối bột xuống <= 5,5 mà không bị bay hơi khi luộc 100°C. Ở pH này, tỷ lệ Acid Sorbic ở dạng phân tử không phân ly tăng vọt (pKa 4,76), dễ dàng thấm qua màng tế bào ức chế nấm men và mốc, tăng hiệu quả bảo quản lên gấp 3-4 lần mà không cần tăng liều sorbat!'
+      },
+      'sorbate+citric': {
+        type: 'synergy',
+        title: 'Cặp Hiệp Đồng Bề Mặt: Kali Sorbat + Acid Citric',
+        desc: 'Acid Citric được dùng để hạ pH dung dịch phun bề mặt xuống khoảng 5,0. Cặp này phát huy tác dụng cực mạnh tiêu diệt nấm mốc bám từ môi trường sau luộc, giúp bún giữ màu trắng trong và thơm ngon.'
+      },
+      'sorbate+cold_storage': {
+        type: 'synergy',
+        title: 'Rào Cản Hoàn Hảo: Sorbat + Bảo Quản Lạnh 4-8°C',
+        desc: 'Nhiệt độ thấp làm tê liệt khả năng phân chia của tế bào vi sinh, cho phép giảm liều lượng phụ gia đến 40% mà vẫn giữ được độ tươi ngon gấp đôi thời gian so với để ở nhiệt độ thường 30-35°C.'
+      },
+      'stpp+lactic': {
+        type: 'antagonism',
+        title: 'Tương Kỵ Cần Lưu Ý: STPP (Kiềm) + Acid Lactic',
+        desc: 'STPP có tính kiềm, nếu cho cùng lúc với Acid Lactic sẽ phản ứng trung hòa trực tiếp sinh nhiệt và muối vô cơ, triệt tiêu tính năng tạo gel của STPP và làm mất tác dụng hạ pH của Acid Lactic. Cần cho STPP hòa tan với nước nhào trước, sau khi nhào đều mới đo và điều chỉnh pH bằng acid lactic sau cùng!'
+      },
+      'stpp+hard_water': {
+        type: 'antagonism',
+        title: 'Tương Kỵ Kết Tủa: Phosphat + Nước Cứng Chứa Ca/Mg',
+        desc: 'Phosphat sẽ phản ứng tạo kết tủa Canxi Phosphat không tan, làm giảm độ bóng của sợi bún và để lại màng mờ đục trên bề mặt. Nước làm bún và nước luộc phải qua hệ thống lọc trao đổi ion làm mềm nước.'
+      },
+      'benzoate+lactic': {
+        type: 'warning',
+        title: 'Cảnh Báo Pháp Lý: Natri Benzoat Chưa Xác Minh',
+        desc: 'Natri Benzoat chỉ có hoạt tính khi pH < 4,5 (quá chua đối với bún tươi) và hiện chưa được xác minh cho phép trong nhóm 06.4.3 của TT 24/2019 và 09/VBHN-BYT. Khuyến cáo không dùng trong bún tươi!'
+      },
+      'modified_starch+xanthan': {
+        type: 'synergy',
+        title: 'Hiệp Đồng Cấu Trúc: Tinh Bột Biến Tính + Xanthan Gum',
+        desc: 'Tinh bột biến tính 1422 ngăn hiện tượng thoái hóa amylose giúp bún mềm dẻo qua đêm, còn Xanthan gum tạo màng gel giữ ẩm và giảm gãy đứt khi đùn sợi. Kết hợp liều nhẹ (7% biến tính + 0,15% gum) cho sợi bún hoàn hảo.'
+      }
+    };
+
+    function checkSynergy() {
+      const a = document.getElementById('synergySelectA').value;
+      const b = document.getElementById('synergySelectB').value;
+      const key1 = `${a}+${b}`;
+      const key2 = `${b}+${a}`;
+      const res = synergyData[key1] || synergyData[key2];
+
+      const box = document.getElementById('synergyResultBox');
+      const title = document.getElementById('synergyTitle');
+      const desc = document.getElementById('synergyDesc');
+
+      if (res) {
+        title.innerText = res.title;
+        desc.innerText = res.desc;
+
+        if (res.type === 'synergy') {
+          box.className = 'mt-4 p-4 rounded-xl bg-slate-900/90 border border-emerald-500/40 flex items-start gap-3';
+          title.className = 'text-sm font-bold text-emerald-400';
+        } else if (res.type === 'antagonism') {
+          box.className = 'mt-4 p-4 rounded-xl bg-slate-900/90 border border-red-500/40 flex items-start gap-3';
+          title.className = 'text-sm font-bold text-red-400';
+        } else {
+          box.className = 'mt-4 p-4 rounded-xl bg-slate-900/90 border border-amber-500/40 flex items-start gap-3';
+          title.className = 'text-sm font-bold text-amber-400';
+        }
+      } else {
+        box.className = 'mt-4 p-4 rounded-xl bg-slate-900/90 border border-slate-700 flex items-start gap-3';
+        title.className = 'text-sm font-bold text-slate-300';
+        title.innerText = 'Tương Tác Trung Tính Hoặc Độc Lập';
+        desc.innerText = 'Hai thành phần này hoạt động ở các phân đoạn công nghệ khác nhau trong quy trình làm bún. Không ghi nhận tương kỵ hóa học trực tiếp, có thể dùng theo liều lượng kỹ thuật quy định.';
+      }
+    }
+
+    // Toggle Surface Spray Inputs in Calculator
+    function toggleSurfaceSpray() {
+      const check = document.getElementById('checkSurfaceSpray');
+      const inputs = document.getElementById('sprayInputs');
+      const resContainer = document.getElementById('sprayResultContainer');
+      if (check.checked) {
+        inputs.classList.remove('hidden');
+        inputs.classList.add('grid');
+        resContainer.classList.remove('hidden');
+      } else {
+        inputs.classList.add('hidden');
+        inputs.classList.remove('grid');
+        resContainer.classList.add('hidden');
+      }
+    }
+
+    // Reset Calculator Defaults
+    function resetCalculatorDefaults() {
+      document.getElementById('inputB').value = 100;
+      document.getElementById('inputY').value = 2.5;
+      document.getElementById('selectAdditive').value = 'sorbate_potassium';
+      document.getElementById('inputCmt').value = 1000;
+      document.getElementById('inputR').value = 0.75;
+      document.getElementById('checkSurfaceSpray').checked = false;
+      toggleSurfaceSpray();
+      runCalculator();
+    }
+
+    // Run Mixing Calculator Logic
+    function runCalculator() {
+      const B = parseFloat(document.getElementById('inputB').value) || 100;
+      const Y = parseFloat(document.getElementById('inputY').value) || 2.5;
+      const Cmt = parseFloat(document.getElementById('inputCmt').value) || 1000;
+      const R = parseFloat(document.getElementById('inputR').value) || 0.75;
+      const addType = document.getElementById('selectAdditive').value;
+
+      document.getElementById('valB').innerText = B;
+      document.getElementById('valY').innerText = Y.toFixed(2);
+      document.getElementById('valR').innerText = R.toFixed(2);
+      
+      const totalBun = B * Y;
+      document.getElementById('totalBunOutput').innerText = Math.round(totalBun);
+
+      // Conversion factor f and ML limit
+      let f = 0.746;
+      let ML = 2000;
+      let addName = 'Kali Sorbat (INS 202)';
+
+      if (addType === 'sorbic_acid') {
+        f = 1.000;
+        ML = 2000;
+        addName = 'Acid Sorbic (INS 200)';
+      } else if (addType === 'stpp') {
+        f = 0.253;
+        ML = 2500;
+        addName = 'STPP Phosphat (INS 451i)';
+      }
+
+      // Formula: m (g) = (Cmt * B * Y) / (1000 * f * R)
+      const m = (Cmt * B * Y) / (1000 * f * R);
+      const percentFlour = (m / (B * 1000)) * 100;
+
+      // Worst case: Cmax = (m * f * 1000) / (B * Y) when R = 1
+      const Cmax = (m * f * 1000) / (B * Y);
+
+      // Update UI results
+      document.getElementById('resAddWeight').innerText = Math.round(m);
+      document.getElementById('resAddPercent').innerText = percentFlour.toFixed(2) + '%';
+      document.getElementById('resWorstCase').innerText = Math.round(Cmax) + ' mg/kg';
+
+      // Meter bar update (scale relative to ML)
+      const meterPercent = Math.min(100, Math.max(5, (Cmax / ML) * 100));
+      const meterBar = document.getElementById('safetyMeterBar');
+      meterBar.style.width = meterPercent + '%';
+
+      const verdict = document.getElementById('safetyVerdict');
+
+      if (Cmax <= ML * 0.8) {
+        meterBar.className = 'bg-emerald-500 h-full rounded-full transition-all duration-300';
+        verdict.className = 'p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-xs text-emerald-300 flex items-start gap-2';
+        verdict.innerHTML = `
+          <i data-lucide="shield-check" class="w-4 h-4 shrink-0 mt-0.5 text-emerald-400"></i>
+          <div>
+            <strong class="block text-emerald-400">ĐẠT AN TOÀN TUYỆT ĐỐI (<= 80% ML)</strong>
+            <span>Dư lượng kịch bản xấu nhất (${Math.round(Cmax)} mg/kg) nằm sâu trong biên an toàn pháp lý.</span>
+          </div>
+        `;
+      } else if (Cmax <= ML) {
+        meterBar.className = 'bg-amber-500 h-full rounded-full transition-all duration-300';
+        verdict.className = 'p-3 rounded-xl bg-amber-500/10 border border-amber-500/30 text-xs text-amber-300 flex items-start gap-2';
+        verdict.innerHTML = `
+          <i data-lucide="alert-triangle" class="w-4 h-4 shrink-0 mt-0.5 text-amber-400"></i>
+          <div>
+            <strong class="block text-amber-400">ĐẠT CẬN BIÊN AN TOÀN (${Math.round(Cmax)} mg/kg)</strong>
+            <span>Khuyến nghị giảm nhẹ Cmt xuống 800 - 900 mg/kg để tạo vùng đệm an toàn phòng ngừa sai số cân.</span>
+          </div>
+        `;
+      } else {
+        meterBar.className = 'bg-red-500 h-full rounded-full transition-all duration-300';
+        verdict.className = 'p-3 rounded-xl bg-red-500/10 border border-red-500/30 text-xs text-red-300 flex items-start gap-2';
+        verdict.innerHTML = `
+          <i data-lucide="alert-octagon" class="w-4 h-4 shrink-0 mt-0.5 text-red-400"></i>
+          <div>
+            <strong class="block text-red-400">CẢNH BÁO VI PHẠM: VƯỢT ML TỐI ĐA!</strong>
+            <span>Nồng độ xấu nhất (${Math.round(Cmax)} mg/kg) đã vượt giới hạn quy định (${ML} mg/kg). Phải giảm Cmt ngay!</span>
+          </div>
+        `;
+      }
+
+      // Handle Surface Spray calculations
+      const isSpray = document.getElementById('checkSurfaceSpray').checked;
+      if (isSpray) {
+        const Cbm = parseFloat(document.getElementById('inputCbm').value) || 500;
+        const U = parseFloat(document.getElementById('inputU').value) || 0.03;
+
+        // Cdd (mg/L acid sorbic) = Cbm / U
+        const Cdd = Cbm / U;
+        // Potassium sorbate grams per Liter = Cdd / (1000 * 0.746)
+        const gSorbatPerL = Cdd / (1000 * 0.746);
+        const totalCombined = Cmax + Cbm;
+
+        document.getElementById('resCdd').innerText = Math.round(Cdd).toLocaleString('vi-VN') + ' mg/L';
+        document.getElementById('resSprayPerLiter').innerText = gSorbatPerL.toFixed(1) + ' g / Lít';
+        document.getElementById('resTotalCombined').innerText = Math.round(totalCombined) + ' mg/kg';
+      }
+
+      lucide.createIcons();
+    }
+
+    // Open & Close Print Modal
+    function openPrintModal() {
+      const B = document.getElementById('inputB').value;
+      const Y = document.getElementById('inputY').value;
+      const totalBun = Math.round(B * Y);
+      const addWeight = document.getElementById('resAddWeight').innerText;
+      const addType = document.getElementById('selectAdditive').value;
+
+      let addName = 'Kali Sorbat (INS 202)';
+      if (addType === 'sorbic_acid') addName = 'Acid Sorbic (INS 200)';
+      if (addType === 'stpp') addName = 'STPP Phosphat (INS 451i)';
+
+      document.getElementById('modalValB').innerText = B + ' kg';
+      document.getElementById('modalValBun').innerText = totalBun + ' kg';
+      document.getElementById('modalAddName').innerText = addName;
+      document.getElementById('modalAddWeight').innerText = addWeight + ' g';
+      document.getElementById('modalDate').innerText = new Date().toLocaleDateString('vi-VN');
+
+      document.getElementById('printModal').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function closePrintModal() {
+      document.getElementById('printModal').classList.add('hidden');
+    }
+
+    // Open & Close PDF Viewer Modal
+    function openPdfModal() {
+      document.getElementById('pdfViewerModal').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function closePdfModal() {
+      document.getElementById('pdfViewerModal').classList.add('hidden');
+    }
+
+    // Contact form submit simulation
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const form = document.getElementById('contactConsultForm');
+      const msg = document.getElementById('contactSuccessMsg');
+      form.reset();
+      msg.classList.remove('hidden');
+      lucide.createIcons();
+      setTimeout(() => {
+        msg.classList.add('hidden');
+      }, 7000);
+    }
+
+    // Initial run on load
+    window.addEventListener('DOMContentLoaded', () => {
+      runCalculator();
+    });
+  </script>
+</body>
+</html>
