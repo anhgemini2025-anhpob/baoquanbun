@@ -23,7 +23,7 @@ Dự án được xây dựng nhằm mục đích cung cấp tài liệu kỹ th
 ---
 
 ## 👨‍🔬 Thông Tin Tác Giả & Bản Quyền
-- **Tác giả / Người trình bày:** Kỹ sư **Nguyễn Đức Duy Anh**
+- **Tác giả / Người trình bày:** **Nguyễn Đức Duy Anh**
 - **Hotline / Zalo tư vấn:** **+84 908 095 693**
 - **Phiên bản:** 1.0 (Tháng 10/2026)
 - **Đơn vị phát triển:** **DUY ANH DIGITAL LAB**
